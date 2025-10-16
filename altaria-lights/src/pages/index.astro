@@ -1,7 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ServicesMarquee from '../components/ServicesMarquee.astro';
+import ServicesHighlight from '../components/ServicesHighlight.astro';
+import About from '../components/About.astro';
+import ContactForm from '../components/ContactForm.astro';
 ---
 
-<Layout>
-    
+<Layout title="Altaria Lights | Agencia de Desarrollo y Automatización en Toledo">
+	<div class="gradient-background absolute top-0 left-0 w-full h-[110vh] z-[1] overflow-hidden">
+		<div class="absolute rounded-full blur-[60px] w-[40vw] h-[40vw] bg-[radial-gradient(circle,#866afa,#866afacc_70%,transparent_100%)] top-[-10%] left-[-10%] [animation:float-1_15s_ease-in-out_infinite_alternate]"></div>
+		<div class="absolute rounded-full blur-[60px] w-[45vw] h-[45vw] bg-[radial-gradient(circle,#866afa,#866afacc_70%,transparent_100%)] bottom-[-20%] right-[-10%] [animation:float-2_18s_ease-in-out_infinite_alternate]"></div>
+		<div class="absolute rounded-full blur-[60px] w-[30vw] h-[30vw] bg-[radial-gradient(circle,#06cbad,#06cbadcc_70%,transparent_100%)] top-[60%] left-[20%] [animation:float-3_20s_ease-in-out_infinite_alternate]"></div>
+		<div class="absolute rounded-full blur-[60px] w-[35vw] h-[35vw] bg-[radial-gradient(circle,#06cbad,#06cbadcc_70%,transparent_100%)] top-[3%] right-[15%] [animation:float-4_17s_ease-in-out_infinite_alternate]"></div>
+		<div class="absolute w-[40vw] h-[40vh] bg-[radial-gradient(circle,rgba(72,0,255,0.15),transparent_70%)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2] [animation:pulse_8s_infinite_alternate] blur-[30px]"></div>
+	</div>
+
+	<Hero />
+	<ServicesMarquee />
+	<ServicesHighlight />
+	<About />
+	<ContactForm />
 </Layout>
