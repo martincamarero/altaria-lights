@@ -1,21 +1,24 @@
-<div class="px-16">
-    <form action="https://formspree.io/f/mblyapdd" method="POST" class="contact-form bg-[#111] p-12 lg:p-16 rounded-xl w-full mx-auto text-white flex flex-col gap-4 mb-16 cursor-pointer transition-all duration-300 hover:shadow-[0px_0px_50px_-10px_var(--color-altaria-purple)]" id="contact-form">
-        <h2 class="text-4xl mb-6 font-semibold relative inline-block mx-auto">Contáctanos</h2>
+<div class="px-4 pt-8 pb-16 lg:px-16" id="contacto">
+    <form action="https://formspree.io/f/mblyapdd" method="POST" class="contact-form mx-auto w-full cursor-pointer rounded-xl bg-[#111] p-6 text-white text-center transition-all duration-300 hover:shadow-[0px_0px_50px_-10px_var(--color-altaria-purple)] lg:p-12" id="contact-form">
+        <h2 class="relative mb-6 inline-block text-3xl font-semibold lg:text-4xl">Contáctanos</h2>
 
-        <label for="name" class="hidden">Nombre</label>
-        <input type="text" id="name" name="name" required placeholder="Nombre" class="p-3 rounded-md border-none text-base bg-[#222] text-white focus:outline-2 focus:outline-[var(--color-altaria-purple)]" />
+        <div class="flex flex-col gap-5">
+            <label for="name" class="hidden">Nombre</label>
+            <input type="text" id="name" name="name" required placeholder="Nombre" class="rounded-md border-none bg-[#222] p-3 text-base text-white focus:outline-2 focus:outline-[var(--color-altaria-purple)]" />
 
-        <label for="email" class="hidden">Correo electrónico</label>
-        <input type="email" id="email" name="email" required placeholder="Correo electrónico" class="p-3 rounded-md border-none text-base bg-[#222] text-white focus:outline-2 focus:outline-[var(--color-altaria-purple)]" />
+            <label for="email" class="hidden">Correo electrónico</label>
+            <input type="email" id="email" name="email" required placeholder="Correo electrónico" class="rounded-md border-none bg-[#222] p-3 text-base text-white focus:outline-2 focus:outline-[var(--color-altaria-purple)]" />
 
-        <label for="message" class="hidden">Cuentanos tu proyecto</label>
-        <textarea id="message" name="message" rows="5" required placeholder="Cuentanos tu proyecto" class="p-3 rounded-md border-none text-base bg-[#222] text-white resize-none overflow-y-auto min-h-[200px] focus:outline-2 focus:outline-[var(--color-altaria-purple)]"></textarea>
+            <label for="message" class="hidden">Cuentanos tu proyecto</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Cuentanos tu proyecto" class="min-h-[150px] resize-none overflow-y-auto rounded-md border-none bg-[#222] p-3 text-base text-white focus:outline-2 focus:outline-[var(--color-altaria-purple)]"></textarea>
 
-        <button type="submit" class="bg-[var(--color-altaria-purple)] text-white p-3 border-none rounded-md font-bold cursor-pointer transition-all duration-200 min-w-[30%] max-w-[400px] mx-auto mt-8 hover:bg-[#4027d3] hover:scale-105">
-            Enviar mensaje
-        </button>
+            <button type="submit" class="mx-auto mt-4 w-full max-w-xs cursor-pointer rounded-md border-none bg-[var(--color-altaria-purple)] p-3 font-bold text-white transition-all duration-200 hover:scale-105 hover:bg-[#4027d3] lg:mt-8 lg:min-w-[30%] lg:max-w-[400px]">
+                Enviar mensaje
+            </button>
 
-        <p id="form-status" class="mx-auto mt-4"></p>
+            <p id="form-status" class="mx-auto mt-2 text-center"></p>
+        </div>
     </form>
 </div>
+
 <script src="../scripts/form.js"></script>

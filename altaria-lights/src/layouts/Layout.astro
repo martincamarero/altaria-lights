@@ -11,7 +11,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -29,18 +29,20 @@ const { title } = Astro.props;
 		/>
 		<link
 			rel="shortcut icon"
-			href="/images/logo-morado.png"
+			href="/logo-morado.png"
 			type="image/x-icon"
 		/>
 		<script
 			src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
 			type="module"></script>
 	</head>
-	<body class="bg-[#050505] text-white font-[Inter] relative overflow-x-hidden">
-		<Header />
-		<main>
-			<slot />
-		</main>
-		<Footer />
+	<body class="bg-[#050505] text-white font-['Inter',_sans-serif]">
+		<div class="relative w-full overflow-x-hidden">
+			<Header />
+			<main>
+				<slot />
+			</main>
+			<Footer />
+		</div>
 	</body>
 </html>

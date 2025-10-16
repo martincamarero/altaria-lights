@@ -1,13 +1,10 @@
-/* 1. Importa las capas de Tailwind v4 */
 @import "tailwindcss";
 
-/* 2. Define tus tokens de diseño como variables CSS */
 :root {
   --color-altaria-purple: #5233ff;
   --color-altaria-cyan: #06cbad;
 }
 
-/* 3. Crea tus propias utilidades personalizadas usando @layer */
 @layer utilities {
   .text-shadow-glow {
     text-shadow: 0 0 30px var(--color-altaria-purple);
@@ -20,16 +17,12 @@
   }
 }
 
-/* 4. Estilos globales y clases que no se pueden migrar a Tailwind */
-
-/* Estado del header al hacer scroll (controlado por JS) */
 header.scrolled {
   backdrop-filter: blur(10px);
   background-color: rgba(13, 19, 24, 0.4);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Clases para el menú hamburguesa (controlado por JS) */
 body.menu-open {
   overflow: hidden;
   height: 100vh;
@@ -55,8 +48,14 @@ body.menu-open {
 }
 
 .menu-overlay {
-  clip-path: circle(0% at calc(100% - 4rem) 4rem);
+  clip-path: circle(0% at calc(100% - 2rem) 2.5rem);
   transition: clip-path 0.6s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .menu-overlay {
+    clip-path: circle(0% at calc(100% - 4rem) 4rem);
+  }
 }
 .menu-overlay.active {
   clip-path: circle(150% at calc(100% - 4rem) 4rem);
