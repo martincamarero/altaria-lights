@@ -34,7 +34,7 @@ body.menu-open {
   background-color: #fff;
   border-radius: 3px;
   transition: all 0.3s ease;
-  box-shadow: 0 0 20px var(--color-altaria-cyan);
+  box-shadow: 0 0 20px var(--color-altaria-purple);
 }
 
 .menu-toggle.active span:nth-child(1) {
@@ -146,7 +146,8 @@ body.menu-open {
   position: absolute;
   background-color: white;
   border-radius: 50%;
-  pointer-events: none; /* Para que no interfieran con los clics del ratón */
+  pointer-events: none;
+  z-index: 2;
 }
 .hover-underline::after {
   content: "";
