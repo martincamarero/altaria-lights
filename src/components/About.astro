@@ -1,8 +1,8 @@
 <section class="w-full px-4 py-16 lg:px-16" id="sobre-nosotros">
-    <div class="about-div mx-auto flex w-full cursor-pointer relative z-3 flex-col items-center gap-8 rounded-[15px] bg-[#111] py-8 px-6 text-center transition-all duration-300 hover:shadow-[0px_0px_50px_-10px_var(--color-altaria-purple)] lg:flex-row-reverse lg:py-12 lg:px-8 lg:text-left">
+    <div class="about-div mx-auto flex w-full cursor-pointer relative z-[2] flex-col items-center gap-8 rounded-[15px] bg-[#111] py-8 px-6 text-center transition-all duration-300 hover:shadow-[0px_0px_50px_-10px_var(--color-altaria-purple)] lg:flex-row-reverse lg:py-12 lg:px-8 lg:text-left group">
         
         <div class="flex w-full flex-col items-center lg:w-3/5 lg:items-start">
-            <h2 class="relative mb-6 inline-block text-3xl font-semibold text-balance lg:text-4xl">
+            <h2 class="relative mb-6 inline-block text-3xl font-semibold text-balance lg:text-4xl hover-underline-purple">
                 ¿Quién está detrás de Altaria Lights?
             </h2>
             <p class="max-w-[900px] text-base text-white/80 lg:text-lg">
@@ -15,18 +15,18 @@
             </p>
             <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
                 <div class="flex items-center gap-4">
-                    <img src="/foto-curriculum-morado-con-fondo-modified.png" alt="Foto de Martín Camarero Benavente" class="h-[50px] w-[50px] rounded-full"/>
+                    <img src="/foto-curriculum-morado-con-fondo-modified.webp" alt="Foto de Martín Camarero Benavente" class="h-[50px] w-[50px] rounded-full"/>
                     <div class="flex flex-col text-left">
                         <h4 class="text-base font-semibold lg:text-lg">Martín Camarero Benavente</h4>
                         <h5 class="text-sm text-[#bbb]">Fundador y Desarrollador de Altaria Lights.</h5>
                     </div>
                 </div>
                 <div class="flex gap-3">
-                    <a href="https://www.linkedin.com/in/..." target="_blank" class="inline-flex items-center justify-center rounded-full bg-[#0a66c2] p-3 text-lg text-white no-underline shadow-[0_4px_14px_rgba(10,102,194,0.3)] transition-all duration-200 hover:scale-105 hover:bg-[#004182]">
-                        <i class="fab fa-linkedin-in"></i>
+                    <a href="https://www.linkedin.com/in/..." target="_blank" aria-label="Contactar por LinkedIn" class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#0a66c2] text-white no-underline transition-all duration-300 hover:scale-110 hover:bg-[#004182]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     </a>
-                    <a href="mailto:martincb002@gmail.com" class="inline-flex items-center justify-center rounded-full bg-[#d44638] p-3 text-lg text-white no-underline shadow-[0_4px_14px_rgba(212,70,56,0.4)] transition-all duration-200 hover:scale-105 hover:bg-[#b5382d]">
-                        <i class="fas fa-envelope"></i>
+                    <a href="mailto:martincb002@gmail.com" aria-label="Contactar por Email" class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#d44638] text-white no-underline transition-all duration-300 hover:scale-110 hover:bg-[#b5382d]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
                     </a>
                 </div>
             </div>
@@ -34,14 +34,13 @@
 
         <div class="flex w-full items-center justify-center lg:w-2/5">
             <dotlottie-player
-                src="/about-animation.json"
+                src="/lottie/about-animation.json"
                 background="transparent"
                 speed="1"
                 style="width: 100%; height: auto;"
                 loop
                 autoplay
                 class="max-w-[300px] lg:max-w-[400px]"
-                alt="Animacion Desarrollador Programando"
             ></dotlottie-player>
         </div>
     </div>

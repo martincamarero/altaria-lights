@@ -2,7 +2,7 @@ function initParticles() {
   const particlesContainer = document.getElementById("particles-container");
   if (!particlesContainer) return;
 
-  const particleCount = 250;
+  const particleCount = 150;
 
   for (let i = 0; i < particleCount; i++) {
     createParticle();
