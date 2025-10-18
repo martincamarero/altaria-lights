@@ -1,192 +1,192 @@
 @import "tailwindcss";
 
 :root {
-  --color-altaria-purple: #5233ff;
-  --color-altaria-cyan: #06cbad;
+    --color-altaria-purple: #5233ff;
+    --color-altaria-cyan: #06cbad;
 }
 
 @font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/inter-v20-latin-regular.woff2") format("woff2");
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/inter-v20-latin-regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("/fonts/inter-v20-latin-700.woff2") format("woff2");
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/fonts/inter-v20-latin-700.woff2") format("woff2");
 }
 
 @layer utilities {
-  .text-shadow-glow {
-    text-shadow: 0 0 30px var(--color-altaria-purple);
-  }
-  .text-shadow-white {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  }
-  .shadow-glow-purple {
-    box-shadow: 0px 0px 20px 2px var(--color-altaria-purple);
-  }
+    .text-shadow-glow {
+        text-shadow: 0 0 30px var(--color-altaria-purple);
+    }
+    .text-shadow-white {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+    .shadow-glow-purple {
+        box-shadow: 0px 0px 20px 2px var(--color-altaria-purple);
+    }
 
-  /* --- Utilidad de Subrayado Unificada --- */
-  .hover-underline-purple {
-    position: relative;
-    text-decoration: none;
-  }
-  .hover-underline-purple::after {
-    content: "";
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--color-altaria-purple);
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.4s ease;
-  }
-  /* Activa la animación en hover directo o en hover del 'group' padre */
-  .hover-underline-purple:hover::after,
-  .group:hover .hover-underline-purple::after {
-    transform: scaleX(1);
-  }
+    /* --- Utilidad de Subrayado Unificada --- */
+    .hover-underline-purple {
+        position: relative;
+        text-decoration: none;
+    }
+    .hover-underline-purple::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-altaria-purple);
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.4s ease;
+    }
+    /* Activa la animación en hover directo o en hover del 'group' padre */
+    .hover-underline-purple:hover::after,
+    .group:hover .hover-underline-purple::after {
+        transform: scaleX(1);
+    }
 }
 
 /* --- Estilos de Componentes Específicos --- */
 
 .particle {
-  position: absolute;
-  background-color: white;
-  border-radius: 50%;
-  pointer-events: none;
-  opacity: 0; /* Empiezan invisibles */
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0; /* Empiezan invisibles */
 }
 header.scrolled {
-  backdrop-filter: blur(10px);
-  background-color: rgba(13, 19, 24, 0.4);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    background-color: rgba(13, 19, 24, 0.4);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 body.menu-open {
-  overflow: hidden;
-  height: 100vh;
+    overflow: hidden;
+    height: 100vh;
 }
 
 .menu-toggle span {
-  height: 3px;
-  width: 100%;
-  background-color: #fff;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 20px var(--color-altaria-purple);
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px var(--color-altaria-purple);
 }
 
 .menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5.5px, 5.5px);
+    transform: rotate(45deg) translate(5.5px, 5.5px);
 }
 .menu-toggle.active span:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
 }
 .menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5.5px, -5.5px);
+    transform: rotate(-45deg) translate(5.5px, -5.5px);
 }
 
 .menu-overlay {
-  clip-path: circle(0% at calc(100% - 2rem) 2.5rem);
-  transition: clip-path 0.6s ease-in-out;
+    clip-path: circle(0% at calc(100% - 2rem) 2.5rem);
+    transition: clip-path 0.6s ease-in-out;
 }
 
 @media (min-width: 768px) {
-  .menu-overlay {
-    clip-path: circle(0% at calc(100% - 4rem) 4rem);
-  }
+    .menu-overlay {
+        clip-path: circle(0% at calc(100% - 4rem) 4rem);
+    }
 }
 .menu-overlay.active {
-  clip-path: circle(150% at calc(100% - 4rem) 4rem);
-  pointer-events: all;
+    clip-path: circle(150% at calc(100% - 4rem) 4rem);
+    pointer-events: all;
 }
 .menu-overlay.active nav ul li a {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.3s;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
 }
 
 .gradient-background::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40vh;
-  pointer-events: none;
-  background: linear-gradient(
-    to bottom,
-    rgba(5, 5, 5, 0) 0%,
-    rgba(5, 5, 5, 0.2) 40%,
-    rgba(5, 5, 5, 0.6) 75%,
-    rgba(5, 5, 5, 1) 100%
-  );
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(5, 5, 5, 0) 0%,
+        rgba(5, 5, 5, 0.2) 40%,
+        rgba(5, 5, 5, 0.6) 75%,
+        rgba(5, 5, 5, 1) 100%
+    );
 }
 
 /* --- Animaciones --- */
 @keyframes float-1 {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  100% {
-    transform: translate(10%, 10%) scale(1.1);
-  }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(10%, 10%) scale(1.1);
+    }
 }
 @keyframes float-2 {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  100% {
-    transform: translate(-10%, -5%) scale(1.15);
-  }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(-10%, -5%) scale(1.15);
+    }
 }
 @keyframes float-3 {
-  0% {
-    transform: translate(0, 0) scale(1);
-    opacity: 0.3;
-  }
-  100% {
-    transform: translate(-5%, 10%) scale(1.05);
-    opacity: 0.6;
-  }
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(-5%, 10%) scale(1.05);
+        opacity: 0.6;
+    }
 }
 @keyframes float-4 {
-  0% {
-    transform: translate(0, 0) scale(1);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translate(8%, -8%) scale(1.1);
-    opacity: 0.8;
-  }
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(8%, -8%) scale(1.1);
+        opacity: 0.8;
+    }
 }
 @keyframes pulse {
-  0% {
-    opacity: 0.3;
-    transform: translate(-50%, -50%) scale(0.9);
-  }
-  100% {
-    opacity: 0.7;
-    transform: translate(-50%, -50%) scale(1.1);
-  }
+    0% {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    100% {
+        opacity: 0.7;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
 }
 
 .servicios-marquee-box h2 {
-  animation: scroll-servicios 35s linear infinite;
+    animation: scroll-servicios 35s linear infinite;
 }
 @keyframes scroll-servicios {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-100%, 0, 0);
-  }
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
 }
