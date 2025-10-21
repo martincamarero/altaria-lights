@@ -1,89 +1,114 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import ServicesMarquee from '../components/ServicesMarquee.astro';
-import ServicesHighlight from '../components/ServicesHighlight.astro';
-import About from '../components/About.astro';
-import ContactForm from '../components/ContactForm.astro';
 ---
 
-<Layout title="Altaria Lights | Agencia de Desarrollo y Automatización en Toledo">
-	<div class="space-y-10 max-w-4xl mx-auto text-gray-700 py-26">
+<Layout title="Altaria Lights | Aviso Legal">
+<div class="relative min-h-screen text-white overflow-hidden">
 
-    <!-- 1. Identificación -->
-    <section class="p-6 bg-white rounded-2xl shadow-md ">
-      <h2 class="text-2xl font-semibold mb-4 flex items-center space-x-2">
-        <span>⚙️</span><span>1. Identificación del titular</span>
-      </h2>
-      <p class="mb-2">En cumplimiento con la LSSI-CE, se informa de los siguientes datos:</p>
-      <ul class="list-disc list-inside space-y-1">
-        <li><strong>Titular:</strong> Altaria Lights</li>
-        <li><strong>Naturaleza:</strong> Grupo de estudiantes de software y marketing</li>
-        <li><strong>Domicilio:</strong> Toledo – Madrid, España</li>
-        <li><strong>Correo electrónico:</strong> <a href="mailto:info@altarialights.com" class="text-purple-600 hover:underline">info@altarialights.com</a></li>
-        <li><strong>Sitio web:</strong> <a href="#" class="text-purple-600 hover:underline">www.altarialights.com</a></li>
-      </ul>
-      <p class="mt-2">Altaria Lights está formada por un equipo multidisciplinar especializado en digitalización, automatización y desarrollo tecnológico de soluciones adaptadas a las necesidades de cada cliente.</p>
-    </section>
+    <!-- 🌌 Fondo dinámico extendido y potenciado -->
+  <div class="gradient-background absolute top-0 left-0 w-full min-h-full h-full z-[1] overflow-hidden [transform:translateZ(0)]">
+    <!-- 💜 Morados principales -->
+    <div class="absolute rounded-full blur-[40px] w-[45vw] h-[45vw] bg-[radial-gradient(circle,#866afa,#866afaee_70%,transparent_100%)] top-[-15%] left-[-10%] [animation:float-1_15s_ease-in-out_infinite_alternate]"></div>
+    <div class="absolute rounded-full blur-[40px] w-[50vw] h-[50vw] bg-[radial-gradient(circle,#6548fe,#6548feee_70%,transparent_100%)] bottom-[5%] right-[-10%] [animation:float-2_18s_ease-in-out_infinite_alternate]"></div>
 
-    <!-- 2. Objeto -->
-    <section class="p-6 bg-white rounded-2xl shadow-md">
-      <h2 class="text-2xl font-semibold mb-4 flex items-center space-x-2">
-        <span>🌐</span><span>2. Objeto del sitio web</span>
-      </h2>
-      <p>El presente sitio web tiene por objeto ofrecer información sobre los servicios, proyectos e iniciativas desarrolladas por Altaria Lights, así como facilitar el contacto con empresas y profesionales interesados en soluciones tecnológicas innovadoras.</p>
-    </section>
+    <!-- 💚 Verdes secundarios -->
+    <div class="absolute rounded-full blur-[40px] w-[35vw] h-[35vw] bg-[radial-gradient(circle,#06cbad,#06cbadee_70%,transparent_100%)] top-[40%] left-[10%] [animation:float-3_20s_ease-in-out_infinite_alternate]"></div>
+    <div class="absolute rounded-full blur-[40px] w-[35vw] h-[35vw] bg-[radial-gradient(circle,#06cbad,#06cbadee_70%,transparent_100%)] top-[10%] right-[10%] [animation:float-3_20s_ease-in-out_infinite_alternate]"></div>
+    <div class="absolute rounded-full blur-[40px] w-[40vw] h-[40vw] bg-[radial-gradient(circle,#06cbad,#06cbadee_70%,transparent_100%)] top-[75%] right-[20%] [animation:float-4_17s_ease-in-out_infinite_alternate]"></div>
 
-    <!-- 3. Condiciones de uso -->
-    <section class="p-6 bg-white rounded-2xl shadow-md">
-      <h2 class="text-2xl font-semibold mb-4 flex items-center space-x-2">
-        <span>📘</span><span>3. Condiciones de uso</span>
-      </h2>
-      <p>El acceso y uso del sitio web atribuye la condición de <strong>usuario</strong>, lo que implica la aceptación plena y sin reservas de todas las disposiciones incluidas en este Aviso Legal.</p>
-      <p class="mt-2">Queda prohibido:</p>
-      <ul class="list-disc list-inside space-y-1">
-        <li>Hacer un uso no autorizado o fraudulento del sitio web.</li>
-        <li>Introducir virus informáticos o cualquier otro sistema que pueda causar daños.</li>
-        <li>Utilizar los contenidos del sitio con fines ilícitos o contrarios a los intereses de Altaria Lights.</li>
-      </ul>
-    </section>
+    <!-- 💠 Extras para llenar toda la página -->
+    <div class="absolute rounded-full blur-[45px] w-[30vw] h-[30vw] bg-[radial-gradient(circle,#866afa,#866afaee_70%,transparent_100%)] top-[120%] left-[5%] [animation:float-5_22s_ease-in-out_infinite_alternate]"></div>
+    <div class="absolute rounded-full blur-[45px] w-[30vw] h-[30vw] bg-[radial-gradient(circle,#06cbad,#06cbadee_70%,transparent_100%)] top-[180%] right-[10%] [animation:float-6_25s_ease-in-out_infinite_alternate]"></div>
+    <div class="absolute rounded-full blur-[50px] w-[40vw] h-[40vw] bg-[radial-gradient(circle,#6548fe,#6548feee_70%,transparent_100%)] top-[250%] left-[25%] [animation:float-7_30s_ease-in-out_infinite_alternate]"></div>
 
-    <!-- 4. Propiedad intelectual -->
-    <section class="p-6 bg-white rounded-2xl shadow-md">
-      <h2 class="text-2xl font-semibold mb-4 flex items-center space-x-2">
-        <span>💡</span><span>4. Propiedad intelectual e industrial</span>
-      </h2>
-      <p>Todos los elementos del sitio web (diseño, logotipo, textos, imágenes, estructura, software, código fuente y demás contenidos) son propiedad exclusiva de Altaria Lights o de terceros que han autorizado su uso.</p>
-      <p class="mt-2">Queda expresamente prohibida su reproducción, distribución o modificación sin el consentimiento previo y por escrito de Altaria Lights.</p>
-    </section>
+    <!-- ✨ Pulso central -->
+    <div class="absolute w-[50vw] h-[50vh] bg-[radial-gradient(circle,rgba(72,0,255,0.25),transparent_70%)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2] [animation:pulse_8s_infinite_alternate] blur-[20px]"></div>
 
-    <!-- 5. Exención de responsabilidades -->
-    <section class="p-6 bg-white rounded-2xl shadow-md">
-      <h2 class="text-2xl font-semibold mb-4 flex items-center space-x-2">
-        <span>🧠</span><span>5. Exención de responsabilidades</span>
-      </h2>
-      <p>Altaria Lights no se responsabiliza de los posibles errores u omisiones en los contenidos del sitio, ni de los daños que puedan derivarse del uso de la información publicada o de la falta de disponibilidad temporal del portal.</p>
-      <p class="mt-2">Tampoco se hace responsable de los contenidos de terceros a los que pueda accederse a través de enlaces externos incluidos en esta web.</p>
-    </section>
+    <!-- 🖤 Capa de contraste -->
+    <div class="absolute inset-0 bg-black/80 z-[3]"></div>
+  </div>
 
-    <!-- 6. Legislación -->
-    <section class="p-6 bg-white rounded-2xl shadow-md">
-      <h2 class="text-2xl font-semibold mb-4 flex items-center space-x-2">
-        <span>⚖️</span><span>6. Legislación aplicable y jurisdicción</span>
-      </h2>
-      <p>Las relaciones entre Altaria Lights y los usuarios se regirán por la legislación española. Cualquier controversia se someterá a los Juzgados y Tribunales de la ciudad de <strong>Toledo</strong>.</p>
-    </section>
 
-    <!-- 7. Contacto -->
-    <section class="p-6 bg-white rounded-2xl shadow-md text-center">
-      <h2 class="text-2xl font-semibold mb-4 flex items-center justify-center space-x-2">
-        <span>📩</span><span>7. Contacto y comunicación</span>
-      </h2>
-      <p>Para cualquier consulta o comentario relacionado con este Aviso Legal, escríbenos a:</p>
-      <p class="mt-2 text-purple-600 font-semibold hover:underline">
-        <a href="mailto:info@altarialights.com">info@altarialights.com</a>
-      </p>
-    </section>
+    <!-- 📄 Contenido principal -->
+    <div class="relative z-[5] py-24 px-6 md:px-16 max-w-4xl mx-auto space-y-16">
+      
 
-	
+     
+
+      <!-- 1. Identificación -->
+      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border mt-15 border-white/10 transition hover:shadow-purple-500/10">
+        <h2 class="text-2xl font-semibold mb-4 flex items-center gap-3 ">
+          <span>⚙️</span><span>1. Identificación del titular</span>
+        </h2>
+        <p class="mb-2">En cumplimiento con la LSSI-CE, se informa de los siguientes datos:</p>
+        <ul class="list-disc list-inside space-y-1 text-white/80">
+          <li><strong>Titular:</strong> Altaria Lights</li>
+          <li><strong>Naturaleza:</strong> Grupo de estudiantes de software y marketing</li>
+          <li><strong>Domicilio:</strong> Toledo – Madrid, España</li>
+          <li><strong>Correo electrónico:</strong> <a href="mailto:altarialights@gmail.com" class="text-purple-400 hover:text-purple-300 transition-colors">altarialights@gmail.com</a></li>
+          <li><strong>Sitio web:</strong> <a href="#" class="text-purple-400 hover:text-purple-300 transition-colors">www.altarialights.com</a></li>
+        </ul>
+        <p class="mt-4 text-white/80">Altaria Lights está formada por un equipo multidisciplinar especializado en digitalización, automatización y desarrollo tecnológico de soluciones adaptadas a las necesidades de cada cliente.</p>
+      </section>
+
+      <!-- 2. Objeto -->
+      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border border-white/10">
+        <h2 class="text-2xl font-semibold mb-4 flex items-center gap-3 ">
+          <span>🌐</span><span>2. Objeto del sitio web</span>
+        </h2>
+        <p class="text-white/80">El presente sitio web tiene por objeto ofrecer información sobre los servicios, proyectos e iniciativas desarrolladas por Altaria Lights, así como facilitar el contacto con empresas y profesionales interesados en soluciones tecnológicas innovadoras.</p>
+      </section>
+
+      <!-- 3. Condiciones de uso -->
+      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border border-white/10">
+        <h2 class="text-2xl font-semibold mb-4 flex items-center gap-3 ">
+          <span>📘</span><span>3. Condiciones de uso</span>
+        </h2>
+        <p>El acceso y uso del sitio web atribuye la condición de <strong>usuario</strong>, lo que implica la aceptación plena y sin reservas de todas las disposiciones incluidas en este Aviso Legal.</p>
+        <p class="mt-3">Queda prohibido:</p>
+        <ul class="list-disc list-inside space-y-1 text-white/80 mt-1">
+          <li>Hacer un uso no autorizado o fraudulento del sitio web.</li>
+          <li>Introducir virus informáticos o cualquier otro sistema que pueda causar daños.</li>
+          <li>Utilizar los contenidos del sitio con fines ilícitos o contrarios a los intereses de Altaria Lights.</li>
+        </ul>
+      </section>
+
+      <!-- 4. Propiedad intelectual -->
+      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border border-white/10">
+        <h2 class="text-2xl font-semibold mb-4 flex items-center gap-3 ">
+          <span>💡</span><span>4. Propiedad intelectual e industrial</span>
+        </h2>
+        <p class="text-white/80">Casi todos los elementos del sitio web son propiedad exclusiva de Altaria Lights o de terceros que han autorizado su uso.</p>
+        <p class="mt-3 text-white/80">Queda expresamente prohibida su reproducción, distribución o modificación sin el consentimiento previo y por escrito de Altaria Lights.</p>
+      </section>
+
+      <!-- 5. Exención de responsabilidades -->
+      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border border-white/10">
+        <h2 class="text-2xl font-semibold mb-4 flex items-center gap-3 ">
+          <span>🧠</span><span>5. Exención de responsabilidades</span>
+        </h2>
+        <p class="text-white/80">Altaria Lights no se responsabiliza de los posibles errores u omisiones en los contenidos del sitio, ni de los daños que puedan derivarse del uso de la información publicada o de la falta de disponibilidad temporal del portal.</p>
+        <p class="mt-3 text-white/80">Tampoco se hace responsable de los contenidos de terceros a los que pueda accederse a través de enlaces externos incluidos en esta web.</p>
+      </section>
+
+      <!-- 6. Legislación -->
+      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border border-white/10">
+        <h2 class="text-2xl font-semibold mb-4 flex items-center gap-3 ">
+          <span>⚖️</span><span>6. Legislación aplicable y jurisdicción</span>
+        </h2>
+        <p class="text-white/80">Las relaciones entre Altaria Lights y los usuarios se regirán por la legislación española. Cualquier controversia se someterá a los Juzgados y Tribunales de la ciudad de <strong>Toledo</strong>.</p>
+      </section>
+
+      <!-- 7. Contacto -->
+      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border border-white/10">
+        <h2 class="text-2xl font-semibold mb-4 flex  gap-3 ">
+          <span>📩</span><span>7. Contacto y comunicación</span>
+        </h2>
+        <p class="text-white/80">Para cualquier consulta o comentario relacionado con este Aviso Legal, escríbenos a:</p>
+        <a class="mt-3 inline-block text-purple-400 font-semibold hover:text-purple-300 transition-colors" href="mailto:altarialights@gmail.com">altarialights@gmail.com</a>
+      </section>
+
+      
+    </div>
+  </div>
 </Layout>
