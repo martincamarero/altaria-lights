@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "videos:loop": "powershell -ExecutionPolicy Bypass -File scripts/generate-planet-loops.ps1",
     "astro": "astro"
   },
   "dependencies": {
