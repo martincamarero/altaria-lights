@@ -218,7 +218,7 @@ function ProblemsPanel({ panel, index }: { panel: Panel; index: number }) {
                 aria-hidden="true"
                 loading="lazy"
                 decoding="async"
-                className="problem-mascot pointer-events-none absolute select-none object-contain z-[3] top-[8svh] right-[-8%] h-[22svh] w-auto opacity-70 drop-shadow-[0_18px_36px_rgba(168,85,247,0.45)] sm:z-[1] sm:top-auto sm:right-auto sm:left-[-10%] sm:bottom-[-10%] sm:h-[44svh] sm:opacity-90 md:left-[-6%] md:bottom-[-4%] md:h-[54svh] lg:left-[-3%] lg:bottom-[-6%] lg:h-[55svh] lg:opacity-95 xl:left-[1%] xl:bottom-[-3%] xl:h-[60svh]"
+                className="problem-mascot pointer-events-none absolute select-none object-contain w-auto drop-shadow-[0_25px_50px_rgba(168,85,247,0.55)] hidden sm:block sm:z-[1] sm:left-[-10%] sm:bottom-[-10%] sm:h-[44svh] sm:opacity-90 md:left-[-6%] md:bottom-[-4%] md:h-[54svh] lg:left-[-3%] lg:bottom-[-6%] lg:h-[55svh] lg:opacity-95 xl:left-[1%] xl:bottom-[-3%] xl:h-[60svh]"
             />
 
             <div className="relative z-[2] flex min-h-[100svh] flex-col gap-[clamp(0.65rem,1.6vh,1.35rem)] px-[clamp(1rem,4vw,4vw)] py-[clamp(1.1rem,3.5vh,3rem)] xl:h-[100svh]">
