@@ -213,7 +213,7 @@ function ProblemsPanel({ panel, index }: { panel: Panel; index: number }) {
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(82,51,255,0.2),transparent_30%),radial-gradient(circle_at_84%_20%,rgba(168,85,247,0.14),transparent_34%),linear-gradient(180deg,#030207_0%,#080512_54%,#030207_100%)]" />
 
             <img
-                src={`optimized/problem-${index + 1}.webp`}
+                src={`/optimized/problem-${index + 1}.webp`}
                 alt=""
                 aria-hidden="true"
                 loading="lazy"
