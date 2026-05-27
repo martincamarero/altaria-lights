@@ -1,0 +1,11 @@
+
+> altaria-lights@0.0.1 dev C:\Users\marti\Desktop\webs altaria\altaria-lights
+> astro dev "--host" "127.0.0.1"
+
+15:22:22 [types] Generated 2ms
+15:22:22 [content] Syncing content
+15:22:22 [content] Astro config changed
+15:22:22 [content] Clearing content store
+15:22:22 [content] Synced content
+15:22:22 [vite] Re-optimizing dependencies because vite config has changed
+ ELIFECYCLE  Command failed with exit code 1.

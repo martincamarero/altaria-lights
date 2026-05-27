@@ -1,121 +1,139 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const sections = [
+    {
+        id: "objeto",
+        number: "01",
+        title: "Objeto",
+        body: "El presente documento tiene por objeto establecer los <strong>Términos y Condiciones</strong> que regulan el uso del sitio web de <strong>Altaria Lights</strong>, así como las relaciones comerciales que puedan surgir entre Altaria Lights y los usuarios o clientes que accedan a la plataforma.<br /><br />El acceso y uso del sitio web implican la aceptación plena y sin reservas de estos Términos y Condiciones. Si no estás de acuerdo con alguno de ellos, te recomendamos no utilizar nuestros servicios.",
+    },
+    {
+        id: "identificacion",
+        number: "02",
+        title: "Identificación del titular",
+        items: [
+            { label: "Titular", value: "Altaria Lights" },
+            { label: "Naturaleza", value: "Grupo de estudiantes de software y marketing" },
+            { label: "Domicilio", value: "Toledo – Madrid, España" },
+            { label: "Correo electrónico", value: "altarialights@gmail.com", link: "mailto:altarialights@gmail.com" },
+            { label: "Sitio web", value: "www.altarialights.com" },
+        ],
+    },
+    {
+        id: "condiciones",
+        number: "03",
+        title: "Condiciones generales de uso",
+        body: "El usuario se compromete a utilizar el sitio web, sus contenidos y servicios de conformidad con la ley, la moral, las buenas costumbres y el orden público. Asimismo, se obliga a no realizar ninguna acción que pueda dañar, inutilizar o sobrecargar el sitio web o impedir su normal funcionamiento.<br /><br />Altaria Lights se reserva el derecho de modificar en cualquier momento los contenidos, diseño o funcionamiento del sitio sin previo aviso.",
+    },
+    {
+        id: "propiedad",
+        number: "04",
+        title: "Propiedad intelectual e industrial",
+        body: "Casi todos los contenidos del sitio web, incluyendo textos, imágenes, logotipos, gráficos, diseño y código fuente, son propiedad de <strong>Altaria Lights</strong> o de terceros que han autorizado su uso. Queda prohibida su reproducción, distribución o modificación sin autorización previa.<br /><br />El logotipo circular morado y el nombre «Altaria Lights» están protegidos por la legislación vigente sobre propiedad industrial e intelectual.",
+    },
+    {
+        id: "responsabilidad-usuario",
+        number: "05",
+        title: "Responsabilidad del usuario",
+        body: "El usuario es el único responsable del uso que haga del sitio web y de los contenidos que comparta o comunique a través del mismo. Altaria Lights no se hace responsable del uso indebido que los usuarios puedan hacer de la información o servicios ofrecidos.",
+    },
+    {
+        id: "garantias",
+        number: "06",
+        title: "Exclusión de garantías y responsabilidad",
+        body: "Altaria Lights no garantiza la disponibilidad, continuidad ni la ausencia de errores en el acceso a la web o a sus contenidos. En ningún caso será responsable por daños directos o indirectos derivados del uso de la información o servicios del sitio.",
+    },
+    {
+        id: "modificaciones",
+        number: "07",
+        title: "Modificaciones de los términos",
+        body: "Altaria Lights podrá actualizar o modificar estos Términos y Condiciones en cualquier momento. Las modificaciones entrarán en vigor desde su publicación en esta página, por lo que se recomienda revisar periódicamente su contenido.",
+    },
+    {
+        id: "datos",
+        number: "08",
+        title: "Protección de datos personales",
+        body: 'Altaria Lights cumple con la normativa vigente en materia de protección de datos personales (Reglamento UE 2016/679 y LOPDGDD). Los datos que los usuarios proporcionen serán tratados de forma confidencial y utilizados únicamente para los fines para los que fueron recabados.<br /><br />Puedes consultar más información en nuestra <a href="/politica-privacidad">Política de Privacidad</a>.',
+    },
+    {
+        id: "legislacion",
+        number: "09",
+        title: "Legislación aplicable y jurisdicción",
+        body: "Estos Términos y Condiciones se rigen por la legislación española. Para la resolución de cualquier conflicto o controversia, las partes se someterán a los Juzgados y Tribunales de <strong>Toledo</strong>, salvo disposición legal en contrario.",
+    },
+    {
+        id: "contacto",
+        number: "10",
+        title: "Contacto",
+        body: 'Si tienes alguna duda o sugerencia sobre estos Términos y Condiciones, escríbenos a <a href="mailto:altarialights@gmail.com">altarialights@gmail.com</a> y te responderemos lo antes posible.',
+    },
+];
 ---
 
 <Layout title="Altaria Lights | Términos y Condiciones de Uso">
-  <div class="relative text-white overflow-hidden">
+    <main class="legal-page relative min-h-screen overflow-hidden bg-[#050505] text-white">
+        <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_82%_8%,rgba(168,85,247,0.18),transparent_36%),radial-gradient(circle_at_8%_92%,rgba(82,51,255,0.16),transparent_38%),linear-gradient(180deg,#050505_0%,#080514_50%,#050505_100%)]"></div>
 
-    <!-- 🌌 Fondo dinámico adaptable -->
-    <div class="gradient-background absolute top-0 left-0 w-full min-h-full h-full z-[1] overflow-hidden [transform:translateZ(0)]">
-      <!-- 💜 Morados principales -->
-      <div class="absolute rounded-full blur-[40px] w-[45vw] h-[45vw] bg-[radial-gradient(circle,#866afa,#866afaee_70%,transparent_100%)] top-[-15%] left-[-10%] [animation:float-1_15s_ease-in-out_infinite_alternate]"></div>
-      <div class="absolute rounded-full blur-[40px] w-[50vw] h-[50vw] bg-[radial-gradient(circle,#6548fe,#6548feee_70%,transparent_100%)] bottom-[5%] right-[-10%] [animation:float-2_18s_ease-in-out_infinite_alternate]"></div>
+        <div class="relative z-[2] mx-auto w-full max-w-4xl px-4 pb-24 pt-28 md:px-8 lg:px-12 lg:pt-36">
 
-      <!-- 💚 Verdes secundarios -->
-      <div class="absolute rounded-full blur-[40px] w-[35vw] h-[35vw] bg-[radial-gradient(circle,#06cbad,#06cbadee_70%,transparent_100%)] top-[10%] right-[10%] [animation:float-3_20s_ease-in-out_infinite_alternate]"></div>
-      <div class="absolute rounded-full blur-[40px] w-[35vw] h-[35vw] bg-[radial-gradient(circle,#06cbad,#06cbadee_70%,transparent_100%)] top-[40%] left-[10%] [animation:float-3_20s_ease-in-out_infinite_alternate]"></div>
-      <div class="absolute rounded-full blur-[40px] w-[40vw] h-[40vw] bg-[radial-gradient(circle,#06cbad,#06cbadee_70%,transparent_100%)] top-[75%] right-[20%] [animation:float-4_17s_ease-in-out_infinite_alternate]"></div>
+            <a href="/" class="legal-back inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-violet-100/72 no-underline transition duration-300 hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5">
+                    <path d="m12 19-7-7 7-7" /><path d="M19 12H5" />
+                </svg>
+                Volver al inicio
+            </a>
 
-      <!-- 💠 Extras para llenar todo el scroll -->
-      <div class="absolute rounded-full blur-[45px] w-[30vw] h-[30vw] bg-[radial-gradient(circle,#866afa,#866afaee_70%,transparent_100%)] top-[120%] left-[5%] [animation:float-5_22s_ease-in-out_infinite_alternate]"></div>
-      <div class="absolute rounded-full blur-[45px] w-[30vw] h-[30vw] bg-[radial-gradient(circle,#06cbad,#06cbadee_70%,transparent_100%)] top-[180%] right-[10%] [animation:float-6_25s_ease-in-out_infinite_alternate]"></div>
-      <div class="absolute rounded-full blur-[50px] w-[40vw] h-[40vw] bg-[radial-gradient(circle,#6548fe,#6548feee_70%,transparent_100%)] top-[250%] left-[25%] [animation:float-7_30s_ease-in-out_infinite_alternate]"></div>
+            <header class="legal-hero liquid-glass-strong glass-border-premium relative mt-8 overflow-hidden rounded-[32px] p-7 sm:p-10 lg:p-12">
+                <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_92%_4%,rgba(196,181,253,0.14),transparent_40%)]"></div>
+                <div class="relative z-[2]">
+                    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-violet-100/64">Información legal</p>
+                    <h1 class="font-display mt-4 text-3xl font-semibold leading-tight tracking-[-0.035em] text-white sm:text-4xl lg:text-5xl">
+                        Términos y condiciones
+                    </h1>
+                    <p class="mt-5 max-w-2xl text-base leading-7 text-white/68 lg:text-lg lg:leading-8">
+                        Las normas que regulan el uso del sitio web de Altaria Lights y las relaciones comerciales con nuestros usuarios y clientes.
+                    </p>
+                </div>
+            </header>
 
-      <!-- ✨ Pulso central -->
-      <div class="absolute w-[50vw] h-[50vh] bg-[radial-gradient(circle,rgba(72,0,255,0.25),transparent_70%)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2] [animation:pulse_8s_infinite_alternate] blur-[20px]"></div>
+            <div class="legal-content mt-10 flex flex-col gap-4">
+                {sections.map((section) => (
+                    <section id={section.id} class="legal-section liquid-glass glass-border-soft relative overflow-hidden rounded-[24px] p-6 sm:p-8">
+                        <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_92%_8%,rgba(168,85,247,0.1),transparent_38%)]"></div>
+                        <div class="relative z-[2] flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
+                            <span class="legal-number font-display grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-violet-300/14 text-sm font-semibold tracking-[0.04em] text-violet-100/86 ring-1 ring-white/[0.05]">{section.number}</span>
+                            <div class="flex-1 min-w-0">
+                                <h2 class="font-display text-xl font-semibold leading-tight tracking-[-0.02em] text-white sm:text-2xl">{section.title}</h2>
+                                <div class="legal-body mt-4 text-base leading-7 text-white/72">
+                                    {section.body && <p set:html={section.body} />}
+                                    {section.items && (
+                                        <ul class="legal-list mt-2 flex flex-col gap-2">
+                                            {section.items.map((item) => (
+                                                <li>
+                                                    <strong class="text-white/88">{item.label}:</strong>{" "}
+                                                    {item.link ? <a href={item.link}>{item.value}</a> : <span>{item.value}</span>}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                ))}
+            </div>
 
-      <!-- 🖤 Capa de contraste -->
-      <div class="absolute inset-0 bg-black/80 z-[3]"></div>
-    </div>
-
-    <!-- 📜 Contenido -->
-    <div class="relative z-[5] space-y-16 py-24 px-6 md:px-16 max-w-5xl mx-auto text-white/90">
-      
-      <!-- 1. Objeto -->
-      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border border-white/10 hover:shadow-purple-500/10 transition">
-        <h2 class="text-2xl font-semibold mb-4 flex items-center space-x-2">
-          <span>📘</span><span>1. Objeto</span>
-        </h2>
-        <p>El presente documento tiene por objeto establecer los <strong>Términos y Condiciones</strong> que regulan el uso del sitio web de <strong>Altaria Lights</strong>, así como las relaciones comerciales que puedan surgir entre Altaria Lights y los usuarios o clientes que accedan a la plataforma.</p>
-        <p class="mt-2">El acceso y uso del sitio web implican la aceptación plena y sin reservas de estos Términos y Condiciones. Si no estás de acuerdo con alguno de ellos, te recomendamos no utilizar nuestros servicios.</p>
-      </section>
-
-      <!-- 2. Identificación del titular -->
-      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border border-white/10 hover:shadow-purple-500/10 transition">
-        <h2 class="text-2xl font-semibold mb-4 flex items-center space-x-2">
-          <span>⚙️</span><span>2. Identificación del titular</span>
-        </h2>
-        <ul class="list-disc list-inside space-y-1">
-          <li><strong>Titular:</strong> Altaria Lights</li>
-          <li><strong>Naturaleza:</strong> Grupo de estudiantes de software y marketing</li>
-          <li><strong>Domicilio:</strong> Toledo – Madrid, España</li>
-          <li><strong>Correo electrónico:</strong> <a href="mailto:altarialights@gmail.com" class="text-purple-400 hover:text-purple-300 transition-colors">altarialights@gmail.com</a></li>
-          <li><strong>Sitio web:</strong> <a href="#" class="text-purple-400 hover:text-purple-300 transition-colors">www.altarialights.com</a></li>
-        </ul>
-      </section>
-
-      <!-- 3. Condiciones generales de uso -->
-      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border border-white/10">
-        <h2 class="text-2xl font-semibold mb-4 flex items-center space-x-2">
-          <span>💡</span><span>3. Condiciones generales de uso</span>
-        </h2>
-        <p>El usuario se compromete a utilizar el sitio web, sus contenidos y servicios de conformidad con la ley, la moral, las buenas costumbres y el orden público. Asimismo, se obliga a no realizar ninguna acción que pueda dañar, inutilizar o sobrecargar el sitio web o impedir su normal funcionamiento.</p>
-        <p class="mt-2">Altaria Lights se reserva el derecho de modificar en cualquier momento los contenidos, diseño o funcionamiento del sitio sin previo aviso.</p>
-      </section>
-
-      <!-- 4. Propiedad intelectual -->
-      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border border-white/10">
-        <h2 class="text-2xl font-semibold mb-4 flex items-center space-x-2">
-          <span>🧠</span><span>4. Propiedad intelectual e industrial</span>
-        </h2>
-        <p>Casi todos los contenidos del sitio web, incluyendo textos, imágenes, logotipos, gráficos, diseño y código fuente, son propiedad de <strong>Altaria Lights</strong> o de terceros que han autorizado su uso. Queda prohibida su reproducción, distribución o modificación sin autorización previa.</p>
-        <p class="mt-2">El logotipo circular morado y el nombre “Altaria Lights” están protegidos por la legislación vigente sobre propiedad industrial e intelectual.</p>
-      </section>
-
-      <!-- 5. Responsabilidad del usuario -->
-      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border border-white/10">
-        <h2 class="text-2xl font-semibold mb-4 flex items-center space-x-2">
-          <span>👤</span><span>5. Responsabilidad del usuario</span>
-        </h2>
-        <p>El usuario es el único responsable del uso que haga del sitio web y de los contenidos que comparta o comunique a través del mismo. Altaria Lights no se hace responsable del uso indebido que los usuarios puedan hacer de la información o servicios ofrecidos.</p>
-      </section>
-
-      <!-- 6. Exclusión de garantías -->
-      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border border-white/10">
-        <h2 class="text-2xl font-semibold mb-4 flex items-center space-x-2">
-          <span>🚫</span><span>6. Exclusión de garantías y responsabilidad</span>
-        </h2>
-        <p>Altaria Lights no garantiza la disponibilidad, continuidad ni la ausencia de errores en el acceso a la web o a sus contenidos. En ningún caso será responsable por daños directos o indirectos derivados del uso de la información o servicios del sitio.</p>
-      </section>
-
-      <!-- 7. Modificaciones -->
-      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border border-white/10">
-        <h2 class="text-2xl font-semibold mb-4 flex items-center space-x-2">
-          <span>🔄</span><span>7. Modificaciones de los términos</span>
-        </h2>
-        <p>Altaria Lights podrá actualizar o modificar estos Términos y Condiciones en cualquier momento. Las modificaciones entrarán en vigor desde su publicación en esta página, por lo que se recomienda revisar periódicamente su contenido.</p>
-      </section>
-
-      <!-- 8. Protección de datos -->
-      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border border-white/10">
-        <h2 class="text-2xl font-semibold mb-4 flex items-center space-x-2">
-          <span>🔐</span><span>8. Protección de datos personales</span>
-        </h2>
-        <p>Altaria Lights cumple con la normativa vigente en materia de protección de datos personales (Reglamento UE 2016/679 y LOPDGDD). Los datos que los usuarios proporcionen serán tratados de forma confidencial y utilizados únicamente para los fines para los que fueron recabados.</p>
-        <p class="mt-2">Puedes consultar más información en nuestra <a href="/politica-privacidad" class="text-purple-400 hover:text-purple-300 transition-colors">Política de Privacidad</a>.</p>
-      </section>
-
-      <!-- 9. Legislación -->
-      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border border-white/10">
-        <h2 class="text-2xl font-semibold mb-4 flex items-center space-x-2">
-          <span>⚖️</span><span>9. Legislación aplicable y jurisdicción</span>
-        </h2>
-        <p>Estos Términos y Condiciones se rigen por la legislación española. Para la resolución de cualquier conflicto o controversia, las partes se someterán a los Juzgados y Tribunales de <strong>Toledo</strong>, salvo disposición legal en contrario.</p>
-      </section>
-
-      <!-- 10. Contacto -->
-      <section class="backdrop-blur-sm bg-white/5 rounded-2xl p-6 md:p-10 shadow-md border border-white/10">
-        <h2 class="text-2xl font-semibold mb-4 flex items-center space-x-2">
-          <span>📩</span><span>10. Contacto</span>
-        </h2>
-        <p>Si tienes alguna duda o sugerencia sobre estos
+            <div class="legal-cta liquid-glass glass-border-soft relative mt-10 overflow-hidden rounded-[24px] p-6 text-center sm:p-7">
+                <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_8%,rgba(168,85,247,0.16),transparent_42%)]"></div>
+                <div class="relative z-[2] flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-between sm:text-left">
+                    <p class="text-sm leading-6 text-white/70 sm:text-base">¿Dudas sobre estos términos? Escríbenos y te respondemos.</p>
+                    <a href="mailto:altarialights@gmail.com" class="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-full bg-violet-300/16 px-5 py-2.5 text-sm font-semibold text-white no-underline shadow-[0_0_30px_rgba(168,85,247,0.2)] transition duration-300 hover:-translate-y-0.5 hover:bg-violet-300/24">
+                        Contactar
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

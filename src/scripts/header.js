@@ -7,7 +7,7 @@ export function initHeader() {
   if (!header || !toggle || !overlay) return;
 
   function updateHeaderScrolled() {
-    if (overlay.classList.contains("active") || window.scrollY > 50) {
+    if (overlay.classList.contains("active") || window.scrollY > 14) {
       header.classList.add("scrolled");
     } else {
       header.classList.remove("scrolled");

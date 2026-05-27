@@ -1,0 +1,270 @@
+---
+const principles = [
+    {
+        number: "01",
+        title: "Pensamos en negocio, no solo en diseño",
+        text: "No diseñamos por decorar. Cada decisión debe ayudar a comunicar mejor, captar oportunidades o mejorar un proceso real.",
+        concept: "Negocio",
+        chip: "Estrategia",
+    },
+    {
+        number: "02",
+        title: "Creamos sistemas, no piezas sueltas",
+        text: "Una web, un CRM, una automatización o una campaña funcionan mejor cuando están pensadas como parte del mismo sistema.",
+        concept: "Automatización",
+        chip: "Sistemas conectados",
+    },
+    {
+        number: "03",
+        title: "Te explicamos las cosas de forma clara",
+        text: "Queremos que entiendas qué hacemos, por qué lo hacemos y qué impacto tiene para tu empresa. Sin tecnicismos innecesarios.",
+        concept: "Claridad",
+        chip: "Comunicación honesta",
+    },
+    {
+        number: "04",
+        title: "Buscamos soluciones mantenibles",
+        text: "Evitamos parches difíciles de tocar. Construimos pensando en que tu sistema pueda crecer, cambiar y evolucionar sin dolor.",
+        concept: "Mantenibilidad",
+        chip: "Mantenimiento web",
+    },
+    {
+        number: "05",
+        title: "Cuidamos rendimiento, SEO y conversión",
+        text: "Una web bonita no basta. También debe cargar rápido, posicionar bien en Google y guiar al usuario hacia el contacto.",
+        concept: "SEO",
+        chip: "Rendimiento web",
+    },
+    {
+        number: "06",
+        title: "Usamos IA donde aporta valor real",
+        text: "No aplicamos inteligencia artificial por moda. La usamos cuando puede ahorrar tiempo, reducir errores o mejorar la atención.",
+        concept: "IA útil",
+        chip: "Inteligencia artificial",
+    },
+];
+
+const radarNodes = principles.map((principle, index) => {
+    const angleDeg = -90 + index * 60;
+    const angleRad = (angleDeg * Math.PI) / 180;
+    const radius = 28;
+    const x = 50 + radius * Math.cos(angleRad);
+    const y = 50 + radius * Math.sin(angleRad);
+
+    return {
+        label: principle.concept,
+        x: Number(x.toFixed(2)),
+        y: Number(y.toFixed(2)),
+        angleDeg,
+        position:
+            index === 0
+                ? "top"
+                : index === 3
+                  ? "bottom"
+                  : index < 3
+                    ? "right"
+                    : "left",
+    };
+});
+---
+
+<section class="why-altaria-section relative overflow-hidden bg-[#050505] text-white" id="por-que-altaria" aria-labelledby="why-altaria-title">
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_82%_12%,rgba(168,85,247,0.18),transparent_32%),radial-gradient(circle_at_12%_82%,rgba(82,51,255,0.16),transparent_34%),linear-gradient(180deg,#050505_0%,#080514_50%,#050505_100%)]"></div>
+
+    <div class="why-altaria-intro why-altaria-desktop-intro relative z-[2] mx-auto max-w-7xl px-4 pb-10 pt-24 md:px-8 lg:px-16 lg:pt-28">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-violet-100/64">Por qué Altaria Lights</p>
+        <h2 id="why-altaria-title" class="font-display max-w-5xl text-3xl font-semibold leading-tight tracking-[-0.035em] text-white sm:text-4xl lg:text-6xl">
+            No somos solo quien te hace una web
+        </h2>
+        <p class="mt-6 max-w-3xl text-base leading-7 text-white/70 lg:text-lg lg:leading-8">
+            Creamos soluciones digitales pensando en tu negocio: que se entiendan, que funcionen, que se puedan mantener y que ayuden a vender mejor, ahorrar tiempo o tomar mejores decisiones.
+        </p>
+    </div>
+
+    <div class="why-altaria-mobile-flow relative z-[2] mx-auto w-full max-w-7xl px-4 pb-8 pt-18">
+        <div>
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-violet-100/64">Por qué Altaria Lights</p>
+            <h2 class="font-display text-3xl font-semibold leading-tight tracking-[-0.035em] text-white">
+                No somos solo quien te hace una web
+            </h2>
+            <p class="mt-4 text-base leading-7 text-white/68">
+                Soluciones digitales pensadas para tu negocio: que se entiendan, funcionen, se puedan mantener y ayuden a vender mejor.
+            </p>
+        </div>
+
+        <div class="why-altaria-mobile-radar liquid-glass-strong relative mt-8 overflow-hidden rounded-[30px] p-5">
+            <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_72%_28%,rgba(168,85,247,0.18),transparent_38%)]"></div>
+            <div class="relative z-[2]">
+                <div class="flex items-start justify-between gap-4">
+                    <div>
+                        <p class="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-violet-100/56">¿POR QUÉ ALTARIA?</p>
+                        <p class="mt-2 text-sm font-medium text-white/72">Diseño · Software · IA · Estrategia</p>
+                        <p class="mt-5 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-white/42">Criterio activo</p>
+                        <p class="trust-active-label font-display mt-2 text-3xl font-semibold tracking-[-0.04em] text-white">{principles[0].concept}</p>
+                    </div>
+                    <span class="trust-mobile-counter rounded-full bg-violet-300/12 px-3 py-1 text-xs font-semibold text-violet-100/82">01/06</span>
+                </div>
+
+                <div class="mt-5 h-1.5 overflow-hidden rounded-full bg-white/[0.07]">
+                    <div class="trust-mobile-progress h-full w-1/6 rounded-full bg-violet-200 shadow-[0_0_18px_rgba(168,85,247,0.48)]"></div>
+                </div>
+
+                <div class="mt-5 grid grid-cols-3 gap-1.5">
+                    {radarNodes.map((node, index) => (
+                        <button
+                            type="button"
+                            class={`trust-radar-chip trust-mobile-dot grid place-items-center rounded-full bg-white/[0.045] px-2.5 py-1.5 text-[0.7rem] font-semibold tracking-[0.04em] text-white/64 ring-1 ring-white/[0.04] transition duration-300 ${index === 0 ? 'is-active' : ''}`}
+                            data-trust-chip={index}
+                            data-mobile-trust-dot={index}
+                            aria-label={`Ver principio ${index + 1}: ${node.label}`}
+                        >
+                            {node.label}
+                        </button>
+                    ))}
+                </div>
+            </div>
+        </div>
+
+        <div class="why-altaria-mobile-carousel mt-7" aria-label="Principios de Altaria Lights">
+            {principles.map((principle, index) => (
+                <article
+                    class={`why-altaria-mobile-slide trust-principle liquid-glass relative overflow-hidden rounded-[28px] p-5 ${index === 0 ? 'is-active' : ''}`}
+                    data-mobile-trust-slide
+                    data-index={index}
+                    data-concept={principle.concept}
+                >
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <span class="font-display text-sm font-semibold text-violet-100/60">{principle.number}</span>
+                            <h3 class="font-display mt-3 text-2xl font-semibold leading-tight tracking-[-0.025em] text-white">{principle.title}</h3>
+                        </div>
+                        <span class="trust-principle-chip rounded-full bg-white/[0.055] px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white/58">{principle.concept}</span>
+                    </div>
+
+                    <p class="mt-5 text-base leading-7 text-white/68">{principle.text}</p>
+
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="rounded-full bg-white/[0.055] px-3 py-2 text-sm font-medium leading-none text-white/70 ring-1 ring-white/[0.04]">{principle.chip}</span>
+                    </div>
+                </article>
+            ))}
+        </div>
+    </div>
+
+    <div class="why-altaria-pin-stage why-altaria-desktop-flow relative z-[2]">
+        <div class="why-altaria-layout mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 md:px-8 md:py-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-16">
+
+            <aside class="trust-radar-panel liquid-glass-strong relative min-h-[430px] overflow-hidden rounded-[34px] p-6 lg:min-h-[520px]">
+                <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_28%,rgba(168,85,247,0.18),transparent_38%)]"></div>
+                <div class="relative z-[2] flex h-full flex-col">
+
+                    <div class="flex items-center justify-between gap-4">
+                        <div>
+                            <p class="text-xs font-semibold uppercase tracking-[0.22em] text-violet-100/54">¿POR QUÉ ALTARIA?</p>
+                            <h3 class="font-display mt-3 text-2xl font-semibold tracking-[-0.035em] text-white lg:text-3xl">Sello de confianza</h3>
+                            <p class="mt-2 text-sm font-medium text-white/64">Diseño · Software · IA · Estrategia</p>
+                        </div>
+                        <span class="trust-status-pill inline-flex items-center gap-2 rounded-full bg-violet-300/14 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-violet-100/82">
+                            <span class="block h-1.5 w-1.5 rounded-full bg-violet-200 shadow-[0_0_10px_rgba(196,181,253,0.9)]"></span>
+                            Activo
+                        </span>
+                    </div>
+
+                    <div class="my-5 h-px bg-violet-100/12"></div>
+
+                    <div class="trust-radar-stage relative mx-auto aspect-square w-full max-w-[360px] flex-1">
+                        <svg class="trust-radar-grid pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 100 100" aria-hidden="true">
+                            <defs>
+                                <radialGradient id="trustRadarGlow" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="rgba(168,85,247,0.22)" />
+                                    <stop offset="65%" stop-color="rgba(168,85,247,0.05)" />
+                                    <stop offset="100%" stop-color="rgba(168,85,247,0)" />
+                                </radialGradient>
+                            </defs>
+
+                            <circle cx="50" cy="50" r="36" fill="url(#trustRadarGlow)" />
+                            <circle cx="50" cy="50" r="34" fill="none" stroke="rgba(196,181,253,0.18)" stroke-width="0.3" />
+                            <circle cx="50" cy="50" r="24" fill="none" stroke="rgba(196,181,253,0.13)" stroke-width="0.25" stroke-dasharray="0.6 1.2" />
+                            <circle cx="50" cy="50" r="14" fill="none" stroke="rgba(196,181,253,0.1)" stroke-width="0.25" />
+
+                            <line x1="50" y1="14" x2="50" y2="86" stroke="rgba(255,255,255,0.04)" stroke-width="0.18" />
+                            <line x1="14" y1="50" x2="86" y2="50" stroke="rgba(255,255,255,0.04)" stroke-width="0.18" />
+
+                            {radarNodes.map((node, index) => (
+                                <line
+                                    class="trust-radar-spoke"
+                                    data-trust-spoke={index}
+                                    x1="50"
+                                    y1="50"
+                                    x2={node.x}
+                                    y2={node.y}
+                                    stroke="rgba(196,181,253,0.16)"
+                                    stroke-width="0.28"
+                                    stroke-linecap="round"
+                                />
+                            ))}
+                        </svg>
+
+                        <div class="trust-radar-center pointer-events-none absolute left-1/2 top-1/2 z-[3] -translate-x-1/2 -translate-y-1/2 rounded-[18px] bg-[rgba(12,8,24,0.7)] px-4 py-3 text-center ring-1 ring-white/[0.06] backdrop-blur-md">
+                            <p class="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-violet-100/54">Criterio activo</p>
+                            <p class="trust-active-label font-display mt-1 text-base font-semibold tracking-[-0.02em] text-white sm:text-lg">{principles[0].concept}</p>
+                        </div>
+
+                        {radarNodes.map((node, index) => (
+                            <div
+                                class={`trust-radar-node trust-radar-node--${node.position} absolute z-[2] ${index === 0 ? 'is-active' : ''}`}
+                                data-trust-node={index}
+                                data-label={node.label}
+                                style={`left:${node.x}%;top:${node.y}%`}
+                                aria-hidden="true"
+                            >
+                                <span class="trust-radar-dot"></span>
+                                <span class="trust-radar-node-label">{node.label}</span>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div class="mt-5 grid grid-cols-3 gap-2">
+                        {radarNodes.map((node, index) => (
+                            <button
+                                type="button"
+                                class={`trust-radar-chip rounded-full bg-white/[0.045] px-2.5 py-1.5 text-[0.7rem] font-semibold tracking-[0.04em] text-white/64 ring-1 ring-white/[0.04] transition duration-300 ${index === 0 ? 'is-active' : ''}`}
+                                data-trust-chip={index}
+                                aria-label={`Ver principio ${index + 1}: ${node.label}`}
+                            >
+                                {node.label}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            </aside>
+
+            <div class="trust-card-stage">
+                {principles.map((principle, index) => (
+                    <article
+                        class={`trust-principle liquid-glass relative overflow-hidden rounded-[28px] p-5 transition duration-500 md:p-6 lg:p-8 ${index === 0 ? 'is-active' : ''}`}
+                        data-trust-card
+                        data-index={index}
+                        data-concept={principle.concept}
+                    >
+                        <div class="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+                            <div>
+                                <span class="font-display text-sm font-semibold text-violet-100/60">{principle.number}</span>
+                                <h3 class="font-display mt-3 text-2xl font-semibold leading-tight tracking-[-0.025em] text-white lg:text-4xl">{principle.title}</h3>
+                            </div>
+                            <span class="trust-principle-chip w-fit rounded-full bg-white/[0.055] px-3 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-white/58">{principle.concept}</span>
+                        </div>
+
+                        <p class="mt-6 max-w-3xl text-base leading-7 text-white/68 lg:text-xl lg:leading-9">{principle.text}</p>
+
+                        <div class="mt-7 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-white/[0.055] px-3 py-2 text-sm font-medium leading-none text-white/70 ring-1 ring-white/[0.04] lg:px-4 lg:py-2.5">{principle.chip}</span>
+                        </div>
+                    </article>
+                ))}
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="../scripts/why-altaria.js"></script>

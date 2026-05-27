@@ -1,0 +1,4 @@
+listen EACCES: permission denied 127.0.0.1:4322
+  Stack trace:
+    at Server.setupListenHandle [as _listen2] (node:net:1918:21)
+    at node:net:2206:7

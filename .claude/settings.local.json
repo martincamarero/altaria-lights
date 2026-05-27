@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://127.0.0.1:5173/)",
+      "Bash(pnpm run *)",
+      "PowerShell($conn = Get-NetTCPConnection -LocalPort 5173 -ErrorAction SilentlyContinue; if \\($conn\\) { Stop-Process -Id $conn.OwningProcess -Force -ErrorAction SilentlyContinue })",
+      "Bash(pnpm build *)"
+    ]
+  }
+}

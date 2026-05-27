@@ -1,0 +1,213 @@
+---
+const faqs = [
+    {
+        id: "precio",
+        q: "¿Cuánto cuesta una web profesional?",
+        a: "Depende del alcance del proyecto: número de páginas, diseño, funcionalidades, SEO, formularios, integraciones o contenido. Por eso preferimos revisar primero tu caso y darte un presupuesto personalizado. Una web profesional no debería ser solo «bonita»: debe cargar rápido, transmitir confianza y ayudarte a conseguir contactos.",
+    },
+    {
+        id: "software-medida",
+        q: "¿Hacéis software a medida desde cero?",
+        a: "Sí. Podemos crear software a medida, aplicaciones web, paneles internos, CRMs, herramientas de gestión o sistemas específicos para tu empresa. Primero analizamos cómo trabajáis y después proponemos una solución adaptada a vuestros procesos reales.",
+    },
+    {
+        id: "mejorar-web",
+        q: "¿Podéis mejorar una web que ya existe?",
+        a: "Sí. Podemos revisar una web existente y mejorar diseño, velocidad, estructura, SEO, conversión, formularios, textos o experiencia de usuario. Si la base técnica no permite crecer bien, también te diremos con claridad si conviene rehacerla.",
+    },
+    {
+        id: "empresas-pequenas",
+        q: "¿Trabajáis con empresas pequeñas?",
+        a: "Sí. Trabajamos con negocios pequeños, empresas en crecimiento y proyectos que necesitan ordenar su parte digital. Lo importante no es el tamaño, sino que haya un problema claro que podamos resolver con diseño web, software, automatización, IA o marketing digital.",
+    },
+    {
+        id: "reunion-coste",
+        q: "¿La reunión inicial tiene coste?",
+        a: "No. La primera reunión es gratuita. Nos cuentas tu situación, revisamos qué necesitas y te orientamos sobre la mejor solución. Después, si encaja, te preparamos una propuesta clara con presupuesto personalizado.",
+    },
+    {
+        id: "plazos",
+        q: "¿Cuánto tarda un proyecto?",
+        a: "Depende del tipo de proyecto. Una web sencilla puede tardar menos que una aplicación web o un software a medida con integraciones. En la propuesta te damos una estimación realista de tiempos, fases y entregables para que sepas qué esperar desde el principio.",
+    },
+    {
+        id: "evolucion",
+        q: "¿Puedo empezar solo con una web y luego automatizar procesos?",
+        a: "Sí. De hecho, muchas empresas empiezan mejorando su web profesional y después añaden automatizaciones, CRM, inteligencia artificial, captación de clientes o herramientas internas. Lo importante es construir una base preparada para crecer.",
+    },
+    {
+        id: "seo-captacion",
+        q: "¿Me ayudáis con SEO y captación de clientes?",
+        a: "Sí. Podemos ayudarte con SEO técnico, estructura de contenidos, páginas orientadas a conversión, medición, campañas y estrategia digital. El objetivo es que tu web no sea solo una tarjeta de visita, sino un canal real para atraer oportunidades.",
+    },
+];
+
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.a,
+        },
+    })),
+};
+
+const sidebarChips = ["Presupuesto personalizado", "Sin compromiso", "SEO y conversión"];
+---
+
+<section class="faq-section relative overflow-hidden bg-[#050505] text-white" id="faq" aria-labelledby="faq-title">
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_10%,rgba(82,51,255,0.16),transparent_34%),radial-gradient(circle_at_88%_84%,rgba(168,85,247,0.14),transparent_32%),linear-gradient(180deg,#050505_0%,#090614_50%,#050505_100%)]"></div>
+
+    <div class="relative z-[2] mx-auto w-full max-w-7xl px-4 py-24 md:px-8 lg:px-16 lg:py-32">
+        <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+
+            <aside class="faq-sidebar flex flex-col gap-8">
+                <header>
+                    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-violet-100/64">Preguntas frecuentes</p>
+                    <h2 id="faq-title" class="font-display mt-4 text-3xl font-semibold leading-tight tracking-[-0.035em] text-white sm:text-4xl lg:text-5xl">
+                        Dudas normales antes de empezar un proyecto digital
+                    </h2>
+                    <p class="mt-5 max-w-xl text-base leading-7 text-white/70 lg:text-lg lg:leading-8">
+                        Sabemos que contratar una web, un software a medida o una automatización puede generar dudas. Por eso te explicamos lo importante de forma clara, sin tecnicismos y sin compromiso.
+                    </p>
+                </header>
+
+                <div class="faq-meeting-card liquid-glass glass-border-soft relative overflow-hidden rounded-[26px] p-5 sm:p-6">
+                    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_88%_8%,rgba(168,85,247,0.16),transparent_38%)]"></div>
+                    <div class="relative z-[2]">
+                        <div class="flex items-start gap-3">
+                            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-violet-300/16 ring-1 ring-white/[0.05]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-violet-100">
+                                    <path d="M8 2v3" />
+                                    <path d="M16 2v3" />
+                                    <rect x="3" y="5" width="18" height="16" rx="3" />
+                                    <path d="M3 10h18" />
+                                    <path d="m9 15 2 2 4-4" />
+                                </svg>
+                            </span>
+                            <div>
+                                <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-violet-100/64">Primera reunión gratuita</p>
+                                <p class="font-display mt-2 text-lg font-semibold tracking-[-0.02em] text-white">Cuéntanos tu caso sin compromiso</p>
+                            </div>
+                        </div>
+
+                        <p class="mt-4 text-sm leading-6 text-white/64">
+                            Revisamos tu situación y te orientamos sobre la solución que mejor encaja antes de hablar de presupuesto.
+                        </p>
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+                            {sidebarChips.map((chip) => (
+                                <span class="rounded-full bg-white/[0.05] px-3 py-1.5 text-xs font-medium text-white/72 ring-1 ring-white/[0.04]">{chip}</span>
+                            ))}
+                        </div>
+
+                        <a href="#contacto" class="mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-violet-300/16 px-5 py-2.5 text-sm font-semibold text-white no-underline shadow-[0_0_30px_rgba(168,85,247,0.18)] transition duration-300 hover:-translate-y-0.5 hover:bg-violet-300/24">
+                            Reservar reunión gratuita
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="faq-list liquid-glass-strong glass-border-premium relative overflow-hidden rounded-[34px] p-3 sm:p-5 lg:p-6">
+                <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_8%_4%,rgba(196,181,253,0.12),transparent_38%)]"></div>
+                <div class="relative z-[2] flex flex-col">
+                    {faqs.map((faq, index) => (
+                        <div
+                            class={`faq-item ${index === 0 ? 'is-open' : ''}`}
+                            data-faq-item
+                            data-faq-index={index}
+                        >
+                            <h3 class="m-0">
+                                <button
+                                    type="button"
+                                    class="faq-trigger"
+                                    data-faq-trigger
+                                    id={`faq-question-${faq.id}`}
+                                    aria-expanded={index === 0 ? "true" : "false"}
+                                    aria-controls={`faq-answer-${faq.id}`}
+                                >
+                                    <span class="faq-question-text font-display">{faq.q}</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <span class="faq-icon-bar faq-icon-bar--h"></span>
+                                        <span class="faq-icon-bar faq-icon-bar--v"></span>
+                                    </span>
+                                </button>
+                            </h3>
+                            <div
+                                id={`faq-answer-${faq.id}`}
+                                class="faq-answer"
+                                role="region"
+                                aria-labelledby={`faq-question-${faq.id}`}
+                            >
+                                <div class="faq-answer-inner">
+                                    <p class="text-sm leading-7 text-white/72 sm:text-base sm:leading-8">{faq.a}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-bottom-cta liquid-glass glass-border-soft relative mt-12 overflow-hidden rounded-[26px] p-6 text-center sm:p-7 lg:mt-16 lg:p-8">
+            <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_8%,rgba(168,85,247,0.16),transparent_42%)]"></div>
+            <div class="relative z-[2] flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-between sm:text-left">
+                <div class="max-w-xl">
+                    <p class="font-display text-xl font-semibold leading-tight tracking-[-0.025em] text-white sm:text-2xl">¿Tienes una duda más concreta?</p>
+                    <p class="mt-2 text-sm leading-6 text-white/66 sm:text-base sm:leading-7">
+                        Cuéntanos tu caso y te diremos qué solución tiene más sentido antes de preparar ningún presupuesto.
+                    </p>
+                </div>
+                <a href="#contacto" class="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-violet-300/18 px-6 py-3 text-sm font-semibold text-white no-underline shadow-[0_0_34px_rgba(168,85,247,0.22)] transition duration-300 hover:-translate-y-0.5 hover:bg-violet-300/26">
+                    Reservar reunión gratuita
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+</section>
+
+<script is:inline>
+    (function () {
+        const section = document.querySelector(".faq-section");
+        if (!section) return;
+
+        section.classList.add("faq-section--enhanced");
+
+        const items = [...section.querySelectorAll("[data-faq-item]")];
+        if (items.length === 0) return;
+
+        const setOpen = (target, open) => {
+            target.classList.toggle("is-open", open);
+            const trigger = target.querySelector("[data-faq-trigger]");
+            if (trigger) trigger.setAttribute("aria-expanded", open ? "true" : "false");
+        };
+
+        items.forEach((item, index) => {
+            setOpen(item, index === 0);
+
+            const trigger = item.querySelector("[data-faq-trigger]");
+            if (!trigger) return;
+
+            trigger.addEventListener("click", () => {
+                const isOpen = item.classList.contains("is-open");
+
+                if (isOpen) {
+                    setOpen(item, false);
+                    return;
+                }
+
+                items.forEach((other) => {
+                    if (other !== item) setOpen(other, false);
+                });
+                setOpen(item, true);
+            });
+        });
+    })();
+</script>
