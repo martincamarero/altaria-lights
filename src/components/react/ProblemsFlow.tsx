@@ -250,19 +250,27 @@ export default function ProblemsFlow() {
     const sectionRef = useRef<HTMLElement | null>(null);
     const viewportRef = useRef<HTMLDivElement | null>(null);
     const [reducedMotion, setReducedMotion] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-        const update = () => setReducedMotion(mq.matches);
-        update();
-        mq.addEventListener("change", update);
-        return () => mq.removeEventListener("change", update);
+        const motionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
+        const mobileMq = window.matchMedia("(max-width: 699px), (pointer: coarse) and (max-width: 899px)");
+        const updateMotion = () => setReducedMotion(motionMq.matches);
+        const updateMobile = () => setIsMobile(mobileMq.matches);
+        updateMotion();
+        updateMobile();
+        motionMq.addEventListener("change", updateMotion);
+        mobileMq.addEventListener("change", updateMobile);
+        return () => {
+            motionMq.removeEventListener("change", updateMotion);
+            mobileMq.removeEventListener("change", updateMobile);
+        };
     }, []);
 
     useGSAP(
         () => {
             const section = sectionRef.current;
-            if (!section || reducedMotion) return;
+            if (!section || reducedMotion || isMobile) return;
 
             const panelEls = gsap.utils.toArray<HTMLElement>(section.querySelectorAll("[data-problems-panel]"));
             if (panelEls.length < 2) return;
@@ -331,7 +339,7 @@ export default function ProblemsFlow() {
                 ScrollTrigger.getById("problems-flow-main")?.kill();
             };
         },
-        { scope: sectionRef, dependencies: [reducedMotion] },
+        { scope: sectionRef, dependencies: [reducedMotion, isMobile] },
     );
 
     return (

@@ -335,6 +335,42 @@
     }
 }
 
+@media (max-width: 699px), (pointer: coarse) and (max-width: 899px) {
+    .problems-flow-single {
+        height: auto !important;
+        contain: layout paint;
+    }
+
+    .problems-flow-viewport {
+        position: relative !important;
+        top: auto !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+    }
+
+    .problems-flow-panel {
+        position: relative !important;
+        inset: auto !important;
+        height: auto !important;
+        min-height: 0 !important;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        will-change: auto !important;
+        contain: layout paint;
+    }
+
+    .problem-mascot {
+        animation: none !important;
+        filter: none !important;
+    }
+
+    .problem-mascot::before {
+        display: none !important;
+    }
+}
+
 .solutions-section {
     position: relative;
     overflow: clip;
@@ -386,18 +422,42 @@
         0 26px 90px rgba(91, 33, 182, 0.24);
 }
 
+.solutions-node {
+    transition:
+        background-color 0.32s ease,
+        box-shadow 0.32s ease,
+        color 0.32s ease;
+}
+
+.solutions-node span:first-child,
+.solutions-node span:last-child {
+    transition:
+        background-color 0.32s ease,
+        color 0.32s ease,
+        box-shadow 0.32s ease,
+        transform 0.32s ease;
+}
+
 .solutions-node.is-active {
-    background-color: rgba(255, 255, 255, 0.06);
+    background-color: rgba(168, 85, 247, 0.14);
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.12),
+        0 0 0 1px rgba(216, 180, 254, 0.22),
+        0 0 22px rgba(168, 85, 247, 0.22);
 }
 
 .solutions-node.is-active span:first-child {
-    background-color: rgba(196, 181, 253, 0.18);
+    background-color: rgba(196, 181, 253, 0.32);
     color: #fff;
-    box-shadow: 0 0 24px rgba(168, 85, 247, 0.25);
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.22),
+        0 0 28px rgba(168, 85, 247, 0.5);
+    transform: scale(1.04);
 }
 
 .solutions-node.is-active span:last-child {
-    color: rgba(255, 255, 255, 0.88);
+    color: #fff;
+    font-weight: 600;
 }
 
 .solutions-mobile-dot.is-active {
@@ -967,6 +1027,11 @@ body.menu-open {
 
 .trust-radar-chip {
     cursor: pointer;
+    transition:
+        background 0.32s ease,
+        color 0.32s ease,
+        box-shadow 0.32s ease,
+        transform 0.32s ease;
 }
 
 .trust-radar-chip:hover {
@@ -975,11 +1040,14 @@ body.menu-open {
 }
 
 .trust-radar-chip.is-active {
-    background: rgba(196, 181, 253, 0.18);
+    background: rgba(168, 85, 247, 0.28);
     color: #fff;
+    font-weight: 700;
+    transform: scale(1.04);
     box-shadow:
-        inset 0 1px 1px rgba(255, 255, 255, 0.16),
-        0 0 18px rgba(168, 85, 247, 0.32);
+        inset 0 1px 1px rgba(255, 255, 255, 0.22),
+        0 0 0 1px rgba(216, 180, 254, 0.32),
+        0 0 26px rgba(168, 85, 247, 0.5);
 }
 
 .trust-mobile-dot.is-active {
@@ -1679,7 +1747,7 @@ html {
 .trust-card-stage .trust-principle {
     transform-style: preserve-3d;
     backface-visibility: hidden;
-    will-change: transform, opacity, filter;
+    will-change: transform, opacity;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1696,7 +1764,6 @@ html {
     .solutions-card-stage .solution-card,
     .trust-card-stage .trust-principle {
         will-change: auto;
-        filter: none !important;
     }
 }
 

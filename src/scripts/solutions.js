@@ -109,10 +109,8 @@ if (section) {
                 gsap.set(card, {
                     zIndex: index + 1,
                     autoAlpha: index === 0 ? 1 : 0,
-                    yPercent: index === 0 ? 0 : 24,
-                    scale: index === 0 ? 1 : 0.92,
-                    rotateX: index === 0 ? 0 : 6,
-                    filter: index === 0 ? "blur(0px)" : "blur(8px)",
+                    yPercent: index === 0 ? 0 : 18,
+                    scale: index === 0 ? 1 : 0.97,
                     transformOrigin: "50% 35%",
                     pointerEvents: index === 0 ? "auto" : "none",
                 });
@@ -146,43 +144,37 @@ if (section) {
                 const position = hold + index * step;
 
                 timeline
+                    .to(
+                        previous,
+                        {
+                            autoAlpha: 0,
+                            yPercent: -14,
+                            scale: 0.97,
+                            pointerEvents: "none",
+                            ease: "power2.in",
+                            duration: 0.42,
+                            overwrite: "auto",
+                        },
+                        position,
+                    )
                     .fromTo(
                         card,
                         {
                             autoAlpha: 0,
-                            yPercent: 24,
-                            scale: 0.92,
-                            rotateX: 6,
-                            filter: "blur(8px)",
+                            yPercent: 18,
+                            scale: 0.97,
                             pointerEvents: "none",
                         },
                         {
                             autoAlpha: 1,
                             yPercent: 0,
                             scale: 1,
-                            rotateX: 0,
-                            filter: "blur(0px)",
                             pointerEvents: "auto",
-                            ease: "expo.out",
-                            duration: 1,
+                            ease: "power3.out",
+                            duration: 0.7,
                             overwrite: "auto",
                         },
-                        position,
-                    )
-                    .to(
-                        previous,
-                        {
-                            autoAlpha: 0,
-                            yPercent: -16,
-                            scale: 0.94,
-                            rotateX: -5,
-                            filter: "blur(10px)",
-                            pointerEvents: "none",
-                            ease: "power3.in",
-                            duration: 0.55,
-                            overwrite: "auto",
-                        },
-                        position + 0.05,
+                        position + 0.32,
                     );
             });
 
