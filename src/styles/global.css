@@ -787,7 +787,14 @@ header.scrolled::before {
 
 body.menu-open {
     overflow: hidden;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+}
+
+.menu-overlay {
     height: 100vh;
+    height: 100dvh;
 }
 
 .menu-toggle {
@@ -852,7 +859,7 @@ body.menu-open {
 }
 
 .menu-overlay > nav {
-    max-height: calc(100svh - 5rem);
+    max-height: calc(100dvh - 5rem);
     overflow-y: auto;
     overscroll-behavior: contain;
     scrollbar-width: none;

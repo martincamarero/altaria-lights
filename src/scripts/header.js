@@ -6,6 +6,8 @@ export function initHeader() {
 
   if (!header || !toggle || !overlay) return;
 
+  let lockedScrollY = 0;
+
   function updateHeaderScrolled() {
     if (overlay.classList.contains("active") || window.scrollY > 14) {
       header.classList.add("scrolled");
@@ -14,12 +16,29 @@ export function initHeader() {
     }
   }
 
+  function lockScroll() {
+    lockedScrollY = window.scrollY;
+    body.style.top = `-${lockedScrollY}px`;
+    body.classList.add("menu-open");
+  }
+
+  function unlockScroll() {
+    body.classList.remove("menu-open");
+    body.style.top = "";
+    window.scrollTo(0, lockedScrollY);
+  }
+
   window.addEventListener("scroll", updateHeaderScrolled);
 
   toggle.addEventListener("click", () => {
-    toggle.classList.toggle("active");
-    overlay.classList.toggle("active");
-    body.classList.toggle("menu-open");
+    const willOpen = !overlay.classList.contains("active");
+    toggle.classList.toggle("active", willOpen);
+    overlay.classList.toggle("active", willOpen);
+    if (willOpen) {
+      lockScroll();
+    } else {
+      unlockScroll();
+    }
     updateHeaderScrolled();
   });
 
@@ -27,7 +46,7 @@ export function initHeader() {
     link.addEventListener("click", () => {
       toggle.classList.remove("active");
       overlay.classList.remove("active");
-      body.classList.remove("menu-open");
+      unlockScroll();
       updateHeaderScrolled();
     })
   );
