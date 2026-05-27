@@ -279,6 +279,16 @@ const aspectVariants = [
             </div>
         </div>
     </div>
+
+    <div class="relative z-[2] mx-auto w-full max-w-5xl px-4 pb-24 md:px-8 lg:px-16 lg:pb-32">
+        <figure class="team-quote">
+            <span class="team-quote-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote class="team-quote-text font-display">
+                Nuestra filosofía es hacer que la tecnología deje de ser una barrera y se convierta en una oportunidad para todos.
+            </blockquote>
+            <figcaption class="team-quote-caption">Equipo Altaria</figcaption>
+        </figure>
+    </div>
 </section>
 
 <script>
@@ -1119,9 +1129,77 @@ const aspectVariants = [
         }
     }
 
+    .team-quote {
+        position: relative;
+        margin: 0 auto;
+        padding: 2.5rem 1.25rem 0;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+            opacity 0.8s ease 0.18s,
+            transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.18s;
+    }
+
+    .team-section.is-revealed .team-quote {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .team-quote::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: clamp(120px, 30%, 240px);
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(196, 181, 253, 0.45), transparent);
+        transform: translateX(-50%);
+    }
+
+    .team-quote-mark {
+        display: block;
+        font-family: var(--font-display, serif);
+        font-size: clamp(4.5rem, 9vw, 7rem);
+        line-height: 0.8;
+        color: rgba(196, 181, 253, 0.55);
+        text-shadow: 0 0 40px rgba(168, 85, 247, 0.35);
+        margin-bottom: 0.5rem;
+    }
+
+    .team-quote-text {
+        margin: 0 auto;
+        max-width: 56ch;
+        font-size: clamp(1.35rem, 2.4vw, 2.1rem);
+        font-weight: 500;
+        line-height: 1.35;
+        letter-spacing: -0.02em;
+        color: #fff;
+        background: linear-gradient(180deg, #ffffff 0%, rgba(216, 180, 254, 0.85) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .team-quote-caption {
+        margin-top: 1.5rem;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: rgba(196, 181, 253, 0.65);
+    }
+
+    @media (min-width: 1024px) {
+        .team-quote {
+            padding-top: 3.5rem;
+        }
+    }
+
     @media (prefers-reduced-motion: reduce) {
         .team-intro,
         .team-board,
+        .team-quote,
         .team-avatar-card,
         .team-avatar-glow,
         .team-avatar-meta,
@@ -1135,7 +1213,8 @@ const aspectVariants = [
         }
 
         .team-section.is-revealed .team-intro,
-        .team-section.is-revealed .team-board {
+        .team-section.is-revealed .team-board,
+        .team-section.is-revealed .team-quote {
             transform: none;
         }
     }
