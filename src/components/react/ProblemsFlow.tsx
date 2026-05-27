@@ -33,9 +33,13 @@ const panels: Panel[] = [
                 se queda atrás
             </>
         ),
-        text:
-            "Muchas empresas no necesitan otra herramienta más. Necesitan entender por qué su web no convierte, por qué su equipo pierde tiempo en tareas repetitivas o por qué su marketing no genera oportunidades reales.",
-        chips: ["Web que no convierte", "Procesos lentos", "Marketing sin resultados", "Dependencia tecnológica"],
+        text: "Muchas empresas no necesitan otra herramienta más. Necesitan entender por qué su web no convierte, por qué su equipo pierde tiempo en tareas repetitivas o por qué su marketing no genera oportunidades reales.",
+        chips: [
+            "Web que no convierte",
+            "Procesos lentos",
+            "Marketing sin resultados",
+            "Dependencia tecnológica",
+        ],
     },
     {
         number: "02",
@@ -165,15 +169,28 @@ const panels: Panel[] = [
     },
 ];
 
-function ProblemCards({ problems, closing }: { problems?: ProblemCard[]; closing?: string }) {
+function ProblemCards({
+    problems,
+    closing,
+}: {
+    problems?: ProblemCard[];
+    closing?: string;
+}) {
     if (!problems?.length) return null;
 
     return (
         <div className="grid grid-cols-2 gap-[clamp(0.4rem,1.2vh,0.75rem)] lg:gap-[clamp(0.75rem,1.45vh,1rem)]">
             {problems.map((problem) => (
-                <article key={problem.title} className="rounded-[clamp(12px,1.5vw,16px)] bg-white/[0.045] p-[clamp(0.65rem,1.55vh,1rem)] ring-1 ring-white/[0.035] lg:p-[clamp(0.95rem,1.8vh,1.25rem)]">
-                    <h3 className="font-display text-[clamp(0.88rem,1.08vw,1.05rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-white lg:text-[clamp(1rem,1.18vw,1.22rem)]">{problem.title}</h3>
-                    <p className="mt-[clamp(0.32rem,0.75vh,0.6rem)] text-[clamp(0.74rem,0.86vw,0.85rem)] leading-[1.35] text-white/64 lg:mt-[clamp(0.45rem,0.95vh,0.75rem)] lg:text-[clamp(0.86rem,0.95vw,1rem)] lg:leading-[1.45]">{problem.text}</p>
+                <article
+                    key={problem.title}
+                    className="rounded-[clamp(12px,1.5vw,16px)] bg-white/[0.045] p-[clamp(0.65rem,1.55vh,1rem)] ring-1 ring-white/[0.035] lg:p-[clamp(0.95rem,1.8vh,1.25rem)]"
+                >
+                    <h3 className="font-display text-[clamp(0.88rem,1.08vw,1.05rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-white lg:text-[clamp(1rem,1.18vw,1.22rem)]">
+                        {problem.title}
+                    </h3>
+                    <p className="mt-[clamp(0.32rem,0.75vh,0.6rem)] text-[clamp(0.74rem,0.86vw,0.85rem)] leading-[1.35] text-white/64 lg:mt-[clamp(0.45rem,0.95vh,0.75rem)] lg:text-[clamp(0.86rem,0.95vw,1rem)] lg:leading-[1.45]">
+                        {problem.text}
+                    </p>
                 </article>
             ))}
             {closing && (
@@ -196,7 +213,7 @@ function ProblemsPanel({ panel, index }: { panel: Panel; index: number }) {
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(82,51,255,0.2),transparent_30%),radial-gradient(circle_at_84%_20%,rgba(168,85,247,0.14),transparent_34%),linear-gradient(180deg,#030207_0%,#080512_54%,#030207_100%)]" />
 
             <img
-                src={`/problem-${index + 1}.png`}
+                src={`optimized/problem-${index + 1}.webp`}
                 alt=""
                 aria-hidden="true"
                 loading="lazy"
@@ -207,9 +224,13 @@ function ProblemsPanel({ panel, index }: { panel: Panel; index: number }) {
             <div className="relative z-[2] flex min-h-[100svh] flex-col gap-[clamp(0.65rem,1.6vh,1.35rem)] px-[clamp(1rem,4vw,4vw)] py-[clamp(1.1rem,3.5vh,3rem)] xl:h-[100svh]">
                 <header className="shrink-0">
                     <div className="flex items-center gap-3">
-                        <span className="font-display text-[clamp(0.8rem,0.95vw,1rem)] font-semibold tracking-[-0.02em] text-violet-100/82">{panel.number}</span>
+                        <span className="font-display text-[clamp(0.8rem,0.95vw,1rem)] font-semibold tracking-[-0.02em] text-violet-100/82">
+                            {panel.number}
+                        </span>
                         <span className="h-px flex-1 bg-gradient-to-r from-violet-200/28 via-violet-200/12 to-transparent" />
-                        <span className="text-[clamp(0.6rem,0.75vw,0.8rem)] font-semibold uppercase tracking-[0.22em] text-violet-100/64">{panel.eyebrow}</span>
+                        <span className="text-[clamp(0.6rem,0.75vw,0.8rem)] font-semibold uppercase tracking-[0.22em] text-violet-100/64">
+                            {panel.eyebrow}
+                        </span>
                     </div>
                     <div className="mt-[clamp(0.6rem,1.5vh,1.6rem)] h-px w-full bg-violet-100/12" />
                 </header>
@@ -222,19 +243,29 @@ function ProblemsPanel({ panel, index }: { panel: Panel; index: number }) {
                     </div>
 
                     <div className="liquid-glass-strong glass-border-soft rounded-[clamp(20px,2.5vw,32px)] p-[clamp(1rem,2.4vh,1.5rem)] lg:p-[clamp(1.25rem,2.7vh,2rem)]">
-                        {panel.text && <p className="text-[clamp(0.98rem,calc(0.35vw+1.05vh),1.25rem)] leading-[1.5] text-white/76 lg:text-[clamp(1.1rem,1.25vw,1.45rem)] lg:leading-[1.58]">{panel.text}</p>}
+                        {panel.text && (
+                            <p className="text-[clamp(0.98rem,calc(0.35vw+1.05vh),1.25rem)] leading-[1.5] text-white/76 lg:text-[clamp(1.1rem,1.25vw,1.45rem)] lg:leading-[1.58]">
+                                {panel.text}
+                            </p>
+                        )}
 
                         {panel.chips && (
                             <div className="mt-[clamp(0.85rem,2.2vh,1.75rem)] flex flex-wrap gap-[clamp(0.4rem,1vh,0.55rem)] lg:gap-[clamp(0.55rem,1vh,0.75rem)]">
                                 {panel.chips.map((chip) => (
-                                    <span key={chip} className="rounded-full bg-white/[0.055] px-[clamp(0.7rem,1vw,0.95rem)] py-[clamp(0.35rem,0.9vh,0.55rem)] text-[clamp(0.72rem,0.85vw,0.9rem)] font-medium leading-none text-white/78 ring-1 ring-white/[0.05] lg:px-[clamp(0.9rem,1.1vw,1.15rem)] lg:py-[clamp(0.45rem,0.9vh,0.65rem)] lg:text-[clamp(0.82rem,0.9vw,0.98rem)]">
+                                    <span
+                                        key={chip}
+                                        className="rounded-full bg-white/[0.055] px-[clamp(0.7rem,1vw,0.95rem)] py-[clamp(0.35rem,0.9vh,0.55rem)] text-[clamp(0.72rem,0.85vw,0.9rem)] font-medium leading-none text-white/78 ring-1 ring-white/[0.05] lg:px-[clamp(0.9rem,1.1vw,1.15rem)] lg:py-[clamp(0.45rem,0.9vh,0.65rem)] lg:text-[clamp(0.82rem,0.9vw,0.98rem)]"
+                                    >
                                         {chip}
                                     </span>
                                 ))}
                             </div>
                         )}
 
-                        <ProblemCards problems={panel.problems} closing={panel.closing} />
+                        <ProblemCards
+                            problems={panel.problems}
+                            closing={panel.closing}
+                        />
                     </div>
                 </div>
 
@@ -254,7 +285,9 @@ export default function ProblemsFlow() {
 
     useEffect(() => {
         const motionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
-        const mobileMq = window.matchMedia("(max-width: 699px), (pointer: coarse) and (max-width: 899px)");
+        const mobileMq = window.matchMedia(
+            "(max-width: 699px), (pointer: coarse) and (max-width: 899px)",
+        );
         const updateMotion = () => setReducedMotion(motionMq.matches);
         const updateMobile = () => setIsMobile(mobileMq.matches);
         updateMotion();
@@ -272,7 +305,9 @@ export default function ProblemsFlow() {
             const section = sectionRef.current;
             if (!section || reducedMotion || isMobile) return;
 
-            const panelEls = gsap.utils.toArray<HTMLElement>(section.querySelectorAll("[data-problems-panel]"));
+            const panelEls = gsap.utils.toArray<HTMLElement>(
+                section.querySelectorAll("[data-problems-panel]"),
+            );
             if (panelEls.length < 2) return;
 
             panelEls.forEach((panel, index) => {
@@ -292,7 +327,8 @@ export default function ProblemsFlow() {
                     id: "problems-flow-main",
                     trigger: section,
                     start: "top top",
-                    end: () => `+=${Math.max(section.offsetHeight - window.innerHeight, 1)}`,
+                    end: () =>
+                        `+=${Math.max(section.offsetHeight - window.innerHeight, 1)}`,
                     scrub: 0.7,
                     invalidateOnRefresh: true,
                     anticipatePin: 1,
@@ -329,8 +365,13 @@ export default function ProblemsFlow() {
             const raf1 = requestAnimationFrame(() => {
                 requestAnimationFrame(() => ScrollTrigger.refresh());
             });
-            const fontsPromise = document.fonts?.ready.then(() => ScrollTrigger.refresh());
-            const refreshTimeout = window.setTimeout(() => ScrollTrigger.refresh(), 250);
+            const fontsPromise = document.fonts?.ready.then(() =>
+                ScrollTrigger.refresh(),
+            );
+            const refreshTimeout = window.setTimeout(
+                () => ScrollTrigger.refresh(),
+                250,
+            );
 
             return () => {
                 cancelAnimationFrame(raf1);
@@ -347,11 +388,19 @@ export default function ProblemsFlow() {
             id="problemas"
             ref={sectionRef}
             className="problems-flow-single relative bg-[#030207] text-white"
-            style={{ "--problems-flow-height": `${panels.length * 100}svh` } as React.CSSProperties}
+            style={
+                {
+                    "--problems-flow-height": `${panels.length * 100}svh`,
+                } as React.CSSProperties
+            }
         >
             <div ref={viewportRef} className="problems-flow-viewport">
                 {panels.map((panel, index) => (
-                    <ProblemsPanel key={panel.number} panel={panel} index={index} />
+                    <ProblemsPanel
+                        key={panel.number}
+                        panel={panel}
+                        index={index}
+                    />
                 ))}
             </div>
         </section>
