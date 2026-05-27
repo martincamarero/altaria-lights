@@ -11,6 +11,18 @@
     --font-serif: "Source Serif 4", Georgia, serif;
 }
 
+::selection {
+    background: rgba(134, 106, 250, 0.45);
+    color: #fff;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: rgba(134, 106, 250, 0.45);
+    color: #fff;
+    text-shadow: none;
+}
+
 @font-face {
     font-family: "Inter";
     font-style: normal;
