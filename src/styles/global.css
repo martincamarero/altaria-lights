@@ -692,6 +692,27 @@ header.scrolled::before {
     opacity: 0.72;
 }
 
+.header-logo-badge {
+    box-shadow: none;
+    transition: box-shadow 420ms ease;
+}
+
+.header-cta {
+    box-shadow: none;
+    transition:
+        background-color 300ms ease,
+        transform 300ms ease,
+        box-shadow 420ms ease;
+}
+
+header.scrolled .header-logo-badge {
+    box-shadow: 0 0 34px rgba(134, 106, 250, 0.48);
+}
+
+header.scrolled .header-cta {
+    box-shadow: 0 0 28px rgba(168, 85, 247, 0.28);
+}
+
 body.menu-open {
     overflow: hidden;
     height: 100vh;
