@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.altarialights.com/sitemap-index.xml
+Sitemap: https://altarialights.com/sitemap-index.xml
+
+# AI-readable context
+LLMS: https://altarialights.com/llms.txt
+LLMS-Full: https://altarialights.com/llms-full.txt
