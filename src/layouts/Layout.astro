@@ -16,7 +16,7 @@ interface Props {
 const {
 	title,
 	description = 'Creamos webs, software a medida e IA para empresas que quieren captar más clientes, automatizar procesos y crecer con soluciones digitales.',
-	image = 'https://altarialights.com/og/altaria-og.jpg',
+	image = 'https://altarialights.com/og/altaria-og.jpg?v=3',
 	canonical = 'https://altarialights.com/',
 } = Astro.props;
 
@@ -31,7 +31,7 @@ injectSpeedInsights();
 
 		<title>{title}</title>
 		<meta name="description" content={description} />
-		<meta name="robots" content="index, follow" />
+		<meta name="robots" content="index, follow, max-image-preview:large" />
 		<link rel="canonical" href={canonical} />
 
 		<link
@@ -39,6 +39,8 @@ injectSpeedInsights();
 			href="/logo-morado.png"
 			type="image/x-icon"
 		/>
+		<link rel="icon" href="/logo-morado.png" type="image/png" />
+		<meta name="theme-color" content="#05050A" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -51,9 +53,9 @@ injectSpeedInsights();
 			name="keywords"
 			content="Altaria Lights, diseño web profesional, software a medida, inteligencia artificial para empresas, automatización de procesos, desarrollo web Toledo, marketing digital, soluciones digitales, transformación digital, páginas web para empresas, agencia digital, consultoría tecnológica"
 		/>
-
 		<meta name="author" content="Martín Camarero Benavente" />
 
+		<!-- Open Graph / WhatsApp / Facebook / LinkedIn -->
 		<meta property="og:site_name" content="Altaria Lights" />
 		<meta property="og:type" content="website" />
 		<meta property="og:locale" content="es_ES" />
@@ -62,14 +64,16 @@ injectSpeedInsights();
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={image} />
 		<meta property="og:image:secure_url" content={image} />
-		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:type" content="image/jpeg" />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta
 			property="og:image:alt"
 			content="Altaria Lights - Diseño web, software a medida e IA para empresas"
 		/>
+		<meta property="og:updated_time" content="2026-06-04T00:00:00+00:00" />
 
+		<!-- Twitter / X -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
